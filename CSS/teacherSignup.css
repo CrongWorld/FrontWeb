@@ -1,0 +1,37 @@
+.classcardLogo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1vw;
+  font-size: 3vw;
+}
+
+.teacherSignup {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.eachInputBox {
+  margin: 0.7vw;
+  width: 25vw;
+  height: 5vh;
+  border-radius: 0.5vw;
+  padding-left: 1vw;
+}
+
+#text {
+  font-size: 1vw;
+  margin-left: 0.6vw;
+}
+
+#teacherButton {
+  width: 20vw;
+  height: 5vh;
+  margin: 1vw 4vw;
+
+}
+
+.agreeInfo {
+  margin: 0.5vw;
+}

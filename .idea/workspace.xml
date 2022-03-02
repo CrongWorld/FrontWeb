@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6aef938b-d270-4334-88b8-bee540f165fd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/클래스카드_시연영상.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/classToReport.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/classToReport.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/mainPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/mainPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/myClass-student.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/myClass-student.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/myClass.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/myClass.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/recallVoca.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/recallVoca.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/rememberVoca.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/rememberVoca.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/setSearchPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/setSearchPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/signUp.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/signUp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/studentSignup.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/studentSignup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/studentVocaMain.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/studentVocaMain.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/teacherSignup.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/teacherSignup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/classToReport.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/classToReport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/myClass-student.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/myClass-student.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/myClass.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/myClass.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/onClick.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/onClick.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/rememberVoca.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/rememberVoca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/rememberVocaJquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/rememberVocaJquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/signedUpMainPage-student.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/signedUpMainPage-student.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/studentVocaMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/studentVocaMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/classToReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/classToReport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/mainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/mainPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/myClass-student.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/myClass-student.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/myClass.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/myClass.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/recallVoca.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/recallVoca.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/rememberVoca.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/rememberVoca.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/setSearchPageElementary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/setSearchPageElementary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/signUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/signUp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/signedUpMainPage-student.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/signedUpMainPage-student.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/signedUpMainPage-teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/signedUpMainPage-teacher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/studentSignup.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/studentSignup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/studentSignup_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/studentSignup_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/studentVocaMain.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/studentVocaMain.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/teacherSignup.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/teacherSignup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classCard.sql" beforeDir="false" afterPath="$PROJECT_DIR$/classCard.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.css" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vocabulary_card_pages/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vocabulary_card_pages/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vocabulary_card_pages/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vocabulary_card_pages/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vocabulary_card_pages/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/vocabulary_card_pages/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vocabulary_card_pages/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/vocabulary_card_pages/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vocabulary_card_pages/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/vocabulary_card_pages/src/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vocabulary_card_pages/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/vocabulary_card_pages/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vocabulary_card_pages/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vocabulary_card_pages/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vocabulary_card_pages/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/vocabulary_card_pages/src/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vocabulary_card_pages/src/reportWebVitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/vocabulary_card_pages/src/reportWebVitals.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="25m46HzAvEbm05iupRo6gAdJHip" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6aef938b-d270-4334-88b8-bee540f165fd" name="Changes" comment="" />
+      <created>1646118752843</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1646118752843</updated>
+      <workItem from="1646118755512" duration="49000" />
+      <workItem from="1646118896628" duration="10000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

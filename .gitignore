@@ -1,0 +1,16 @@
+
+*.pptx
+
+.DS_Store
+
+node_modules/
+
+산출물 샘플/
+
+*.zip
+
+산출물샘플/
+
+클래스카드 분석/
+
+*.mp4

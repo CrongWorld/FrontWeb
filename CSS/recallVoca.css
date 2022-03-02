@@ -1,0 +1,169 @@
+.rememberMenuBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 5vh;
+  }
+  
+  #menuButton {
+    background-color: black;
+    border: none;
+    color: white;
+  }
+  
+  .rememberVocaCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    width: 40vw;
+    height: 80vh;
+    margin: 10vh auto ;
+    background-color: rgb(83, 83, 83);
+  }
+  
+  .topVocaCard {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
+  
+  .middleVocaCard {
+    border-radius: 10px;
+    background-color: white;
+    height: 50vh;
+  }
+  
+  #topCard {
+    display: flex;
+    flex-direction: row;
+    width: 22vw;
+    padding: 1vw;
+    justify-content: space-between;
+  }
+  
+  #topCardImg {
+    width: 1vw;
+    height: 1vw;
+  }
+  
+  .middleCard {
+    height: 21vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px rgb(212, 212, 212);
+    z-index: 999;
+  }
+  
+  #vocaKorean{
+    position: relative;
+  }
+  
+  #vocaKorean{
+    position: relative;
+  }
+  #hideCard{
+    position: absolute;
+    height: 130%;
+    width: 100%;
+    background-color: green;
+    border-radius: 10px;
+    z-index: 999;
+  }
+  
+  #middleVoca {
+    font-weight: 500;
+    font-size: 2vw;
+  }
+  
+  .bottomVocaCard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  
+  #bottomButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 15vw;
+    height: 13vh;
+  }
+  
+  #buttonStyle {
+    border: none;
+    border-radius: 10px;
+    height: 6vh;
+    width: 13vw;
+    font-size: 1vw;
+    font-weight: 700;
+    background-color: white;
+    margin-bottom: 5px;
+  }
+  
+  #keyBoard {
+    font-size: 10px;
+    color: grey;
+    font-weight: 700;
+  }
+  
+   /* swiper style */
+  
+  
+        html,
+        body {
+          position: relative;
+          height: 100%;
+        }
+  
+        body {
+          background: rgb(83, 83, 83);
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+          font-size: 14px;
+          color: #000;
+          margin: 0;
+          padding: 0;
+        }
+  
+        .swiper {
+          width: 100%;
+          height: 100%;
+        }
+  
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+  
+          /* Center slide text vertically */
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+      
+        }
+  
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+  

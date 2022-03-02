@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="window">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA_Compatible" content="IE=edge">
+  <meta name="viewport" content="width= device-width">
+  <meta http-equiv="ontent-Security-Policy" content="upgrade-insecure-requests">
+  <meta name='google' value='notranslate'>
+  <link rel="stylesheet" href="../CSS/mainPage.css">
+  <link rel="stylesheet" href="../CSS/myClass.css">
+  <!-- <link rel="stylesheet" href="../CSS/setSearchPage.css"> -->
+  <link rel="stylesheet" href="../CSS/classToReport.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <title>클래스카드 | 영어쌤 1/3이 선택한 스마트 단어장</title>
+</head>
+
+<body>
+  <div class="titleShadowBox"></div>
+  <div class="titleContents">
+    <div class="title-mainImgContents">
+      <a href="https://www.classcard.net/" style="text-decoration : none">
+        <div style="display : flex;">
+          <a href="https://www.classcard.net/" style="text-decoration : none">
+            <p id="mainLeftTopImg">CLASS CARD</P>
+          </a>
+        </div>
+      </a>
+    </div>
+    <div class="title-mainContents">
+      <div id="searchSet">
+        <a onclick="clickSearchSet()"><img src="../Images/serchSet.png"></a>
+      </div>
+      <div id="makeSet">
+        <img src="../Images/makeSet.png">
+      </div>
+    </div>
+    <div class="title-loginContents">
+      <a onclick="clickLogin()" class="user profilePic"></a>
+      <div class="userLoginInfo" style="margin-left: 20px;"><label id="UserName" style="font-weight: bolder;"></label>
+        <label id="studentOrTeacher">선생님</label>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="mainContents">
+    <div class="main-leftConsole">
+      <div class="leftConsoleDiv">
+        <div id="leftDivisions">
+          <a onclick="clickMyClass()" style="float: left;">나의 클래스</a>
+          <div style="float:right;margin-left: 10px;">
+            <div class="classesRight" id="classesPlus" style="float: left; padding-right: 10px;">➕</div>
+            <div class="classesRight" id="classesSetting" style="float: left; padding-right: 10px;">⚙️</div>
+            <div class="classesRight" id="classesEye" style="float: left; padding-right: 10px;">👁️‍🗨️</div>
+          </div>
+        </div>
+        <div id="getClasses">
+
+          <!-- <div id="leftDivisions" style="font-family: 'Noto Sans KR'; color: rgb(138, 214, 138);">DA_English_A반</div> -->
+
+        </div>
+      </div>
+      <div class="leftConsoleDiv">
+        <div id="leftDivisions">
+          <div style="float: left;">나의 폴더</div>
+          <div class="classesRight" id="classesPlus" style="float: right; padding-right: 10px;">➕</div>
+        </div>
+        <!-- <div id="leftDivisions">📁 이용한 세트</div> -->
+        <div id="getFolders">
+
+        </div>
+      </div>
+    </div>
+    <div class="main-rightDashBoard">
+      <div class="main-topInfo">
+        <table class="tg">
+          <thead>
+            <tr>
+              <th class="tg-pivw" id="main-classCode"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tg-7j3o" id="main-className"></td>
+            </tr>
+            <tr>
+              <td class="tg-8m24" id="main-teacherInfo"></td>
+            </tr>
+          </tbody>
+          </table>
+      </div>
+      <div class="main-middleDashBoard">
+        <a class="middelDashBoardclassTab" id="setTab" onclick="clickMyClass()">세트</a>
+        <a class="middelDashBoardclassTab" id="studentTab" onclick="clickMyClassStudent()">학생</a>
+        <a class="middelDashBoardclassTab" id="reportTab" style="color: rgb(95, 181, 46); border-color: white white rgb(95, 181, 46) white; border-width: 3px; border-style: solid;" onclick="clickReport()">리포트</a>
+        <div class="middelDashBoardclassTab" id="K-SatTab">쪽지</div>
+        <div class="middelDashBoardclassTab" id="ELTTab">관리</div>
+      </div>
+      <div class="reportMenuBar">
+        <button id="reportMenuButton">세트 학습현황</button>
+        <button id="reportMenuButton">학생 학습현황</button>
+        <button id="reportMenuButton">학원 리포트</button>
+      </div>
+
+      <div class="dataSave">
+        <p style="margin: 5px">정렬</p>
+        <p style="margin: 5px;">엑셀저장</p>
+        <p style="margin: 5px;">전체 초기화</p>
+      </div>
+      <div class='setList'>
+        <ul class="reportUnorderedList">
+        </ul>
+
+
+      </div>
+
+
+
+      <div>
+        <table id="reportTable">
+          <thead id="reportThead">
+            <tr id="reportTr">
+              <th colspan="2" id="reportTh">학생</th>
+              <th id="reportTh">스피킹</th>
+              <th id="reportTh">암기</th>
+              <th id="reportTh">리콜</th>
+              <th id="reportTh">스펠</th>
+              <th id="reportTh">복습</th>
+              <th id="reportTh">테스트</th>
+            </tr>
+          </thead>
+
+          <!-- <tr>
+            <td v-if="studentInfo">
+              <img src="../Images/default_photo.png" style="border-radius : 50px;">
+            </td>
+            <td>" + sampleStudentReport.studentInfo[idx].name</td>
+            <td v-if="studentInfo">" + sampleStudentReport.studentInfo[idx].speaking + "</td>
+            <td>" + sampleStudentReport.studentInfo[idx].remember + "</td>
+            <td v-if="studentInfo">" + sampleStudentReport.studentInfo[idx].recall + "</td>
+            <td v-if="studentInfo">" + sampleStudentReport.studentInfo[idx].spell + "</td>
+            <td>" + sampleStudentReport.studentInfo[idx].repeat + "</td>
+            <td v-if="studentInfo">" + sampleStudentReport.studentInfo[idx].test + "</td>
+          </tr> -->
+
+          <!-- <tr>
+            <td>학생1</td>
+            <td>학생1</td>
+            <td>학생1</td>
+            </tr>
+            <tr>
+              
+            <td>학생2</td>
+            <td>학생2</td>
+            <td>학생2</td>
+            </tr> -->
+
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="../JS/myClass.js"></script>
+  <script type="text/javascript" src="../JS/classToReport.js"></script>
+  <script type="text/javascript" src="../JS/onClick.js"></script>
+</body>
+
+</html>
