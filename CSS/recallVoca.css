@@ -69,6 +69,7 @@
 #vocaKorean{
   position: relative;
 }
+
 .hideCard{
   position: absolute;
   height: 27vh;
@@ -187,12 +188,14 @@ body {
 }
 
 .randomKoreanMean{
-  width: 100%;
+  position: relative;
+  width: 98%;
   height: 25%;
   margin: 2px;
 
   text-align: left;
   background-color: bisque;
+  z-index: 100;
 }
 
 .koreanNum{
