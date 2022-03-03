@@ -10,7 +10,7 @@
 }
 
 .profilePic {
-    background-image: url('../Images/default_photo.png');
+    background-image: url('/Images/default_photo.png');
 }
 
 .titleShadowBox {
