@@ -44,18 +44,18 @@
    html += sampleVoca.voca[i].englishVoca
    html += '</p> </div> <div class=\"middleCard\" id=\"vocaKorean\" style=\"border: none;\">'
    html += '<div class=\"middelCard\ hideCard" id = \"hideCard' + i + '\" onmouseover="setHideCardDiv('+ i +')"></div>'
-   html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <p id="randKoreanMean1">'
+   html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
    html += sampleVoca.voca[i].koreanMean
-   html += '</p></div>'
-   html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <p id="randKoreanMean1">'
+   html += '</div></div>'
+   html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
    html += sampleVoca.voca[i].koreanMean
-   html += '</p></div>'
-   html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <p id="randKoreanMean1">'
+   html += '</div></div>'
+   html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
    html += sampleVoca.voca[i].koreanMean
-   html += '</p></div>'
-   html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <p id="randKoreanMean1">'
+   html += '</div></div>'
+   html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
    html += sampleVoca.voca[i].koreanMean
-   html += '</p></div>'
+   html += '</div></div>'
    html += '</div > </div> </div> </div></div>'
    $(".swiper-wrapper").append(html);
  }
