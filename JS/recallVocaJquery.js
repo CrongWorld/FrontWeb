@@ -32,7 +32,6 @@
  }
 
  for (var i in sampleVoca.voca) {
-  
    var html = '';
    
    html += '<div class=\"swiper-slide\">'
@@ -47,13 +46,13 @@
    html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
    html += sampleVoca.voca[i].koreanMean
    html += '</div></div>'
-   html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+   html += '<div class="randomKoreanMean" id="koreanMean2"> <div class="koreanNum">2.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
    html += sampleVoca.voca[i].koreanMean
    html += '</div></div>'
-   html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+   html += '<div class="randomKoreanMean" id="koreanMean3"> <div class="koreanNum">3.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
    html += sampleVoca.voca[i].koreanMean
    html += '</div></div>'
-   html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+   html += '<div class="randomKoreanMean" id="koreanMean4"> <div class="koreanNum">4.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
    html += sampleVoca.voca[i].koreanMean
    html += '</div></div>'
    html += '</div > </div> </div> </div></div>'
