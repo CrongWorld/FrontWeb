@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+        .flex-container{ 
+            width: 100%; 
+            height: 100vh; 
+            display: -webkit-box; 
+            display: -moz-box;
+            display: -ms-flexbox; 
+            display: flex; 
+ 
+            -webkit-box-align: center; 
+            -moz-box-align: center;
+            -ms-flex-align: center;
+            align-items: center; /* 수직 정렬 */
+ 
+            -webkit-box-pack: center;
+            -moz-box-pack: center; 
+            -ms-flex-pack: center; 
+            justify-content: center; /* 수평 정렬 */
+
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+        } 
+    </style>
+    <title>셀스 개발중 페이지 방문하기</title>
+</head>
+<body>
+    <div class="flex-container" style="">
+        <h1 style="font-size:100px;">개발중인 셀스 페이지 방문하기</h1>
+        <div class="buttons" style="margin-top: 20px;">
+            <button class="button is-success" onclick="location.href='Pages/mainPage.html'">메인페이지 방문하기</button>
+            <button class="button is-info">뭘넣을까요</button>
+            <button class="button is-danger">뭘넣을까요</button>
+        </div>
+    </div>
+    
+</body>
+</html>
