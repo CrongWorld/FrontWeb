@@ -193,6 +193,8 @@ body {
   height: 100%;
   margin: 2px;
 
+  border-bottom: solid 1px rgb(218, 214, 214);
+
   text-align: left;
   /* background-color: bisque; */
   z-index: 100;
