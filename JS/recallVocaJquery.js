@@ -43,18 +43,78 @@
    html += sampleVoca.voca[i].englishVoca
    html += '</p> </div> <div class=\"middleCard\" id=\"vocaKorean\" style=\"border: none;\">'
    html += '<div class=\"middelCard\ hideCard" id = \"hideCard' + i + '\" onmouseover="setHideCardDiv('+ i +')"></div>'
-   html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
-   html += sampleVoca.voca[i].koreanMean
-   html += '</div></div>'
-   html += '<div class="randomKoreanMean" id="koreanMean2"> <div class="koreanNum">2.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
-   html += sampleVoca.voca[i].koreanMean
-   html += '</div></div>'
-   html += '<div class="randomKoreanMean" id="koreanMean3"> <div class="koreanNum">3.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
-   html += sampleVoca.voca[i].koreanMean
-   html += '</div></div>'
-   html += '<div class="randomKoreanMean" id="koreanMean4"> <div class="koreanNum">4.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
-   html += sampleVoca.voca[i].koreanMean
-   html += '</div></div>'
+   //여기서부터
+   html += randomKoreanOption(i)
+   //여기까지 대체
    html += '</div > </div> </div> </div></div>'
    $(".swiper-wrapper").append(html);
  }
+
+ /**
+  * 
+  * @param {int} optionNum 
+  * @returns 1~5번의 랜덤한 한국말 다지선다형 제공
+  */
+ function randomKoreanOption(optionNum){
+  var html = '';
+  //var answerOptionNum = getRandomInt(1, 5, []);
+  var answerOptionNum = 1;
+  console.log("answer is: " + answerOptionNum + ' Which is: ' + sampleVoca.voca[optionNum].koreanMean);
+
+  if(answerOptionNum == 1){
+    var option2, oprion3, option4
+    
+    html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += sampleVoca.voca[i].koreanMean
+    html += '</div></div>'
+
+    option2 = getRandomInt(1, sampleVoca.voca.length, [i]);
+    console.log('option2: ' + option2 + ' which is: ' +sampleVoca.voca[option2].koreanMean)
+    html += '<div class="randomKoreanMean" id="koreanMean2"> <div class="koreanNum">2.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += sampleVoca.voca[option2].koreanMean
+    html += '</div></div>'
+
+    option3 = getRandomInt(1, sampleVoca.voca.length, [i, option2]);
+    html += '<div class="randomKoreanMean" id="koreanMean3"> <div class="koreanNum">3.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += sampleVoca.voca[option3].koreanMean
+    html += '</div></div>'
+
+    option4 = getRandomInt(1, sampleVoca.voca.length, [i, option2, option3]);
+    html += '<div class="randomKoreanMean" id="koreanMean4"> <div class="koreanNum">4.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += sampleVoca.voca[option4].koreanMean
+    html += '</div></div>'
+  }
+
+  
+
+  return html
+}
+
+/**
+ * 
+ * @param {int} min 
+ * @param {int[]} max 
+ * @param {int} except
+ * @returns 1~5사이의 정수형 integer
+ */
+function getRandomInt(min, max, except) {
+  min = Math.ceil(min);
+  max = Math.floor(max+1);
+
+  while(1)
+  {
+    var randVal = Math.floor(Math.random() * (max - min)) + min;
+    var is_duplicated = false;
+    for(let i of except)
+    {
+      if(i == randVal){
+        is_duplicated = true;
+        break;
+      }
+    }
+    if(is_duplicated) continue;
+    else return randVal;
+  }
+}
+  
+  
