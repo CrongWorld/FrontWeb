@@ -43,18 +43,27 @@
    html += sampleVoca.voca[i].englishVoca
    html += '</p> </div> <div class=\"middleCard\" id=\"vocaKorean\" style=\"border: none;\">'
    html += '<div class=\"middelCard\ hideCard" id = \"hideCard' + i + '\" onmouseover="setHideCardDiv('+ i +')"></div>'
-   html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
-   html += sampleVoca.voca[i].koreanMean
-   html += '</div></div>'
-   html += '<div class="randomKoreanMean" id="koreanMean2"> <div class="koreanNum">2.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
-   html += sampleVoca.voca[i].koreanMean
-   html += '</div></div>'
-   html += '<div class="randomKoreanMean" id="koreanMean3"> <div class="koreanNum">3.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
-   html += sampleVoca.voca[i].koreanMean
-   html += '</div></div>'
-   html += '<div class="randomKoreanMean" id="koreanMean4"> <div class="koreanNum">4.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
-   html += sampleVoca.voca[i].koreanMean
-   html += '</div></div>'
+   //여기서부터
+   html += randomKoreanOption(i)
+   //여기까지 대체
    html += '</div > </div> </div> </div></div>'
    $(".swiper-wrapper").append(html);
  }
+
+ function randomKoreanOption(optionNum){
+  var html = '';
+  html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+  html += sampleVoca.voca[i].koreanMean
+  html += '</div></div>'
+  html += '<div class="randomKoreanMean" id="koreanMean2"> <div class="koreanNum">2.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+  html += sampleVoca.voca[i].koreanMean
+  html += '</div></div>'
+  html += '<div class="randomKoreanMean" id="koreanMean3"> <div class="koreanNum">3.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+  html += sampleVoca.voca[i].koreanMean
+  html += '</div></div>'
+  html += '<div class="randomKoreanMean" id="koreanMean4"> <div class="koreanNum">4.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+  html += sampleVoca.voca[i].koreanMean
+  html += '</div></div>'
+
+  return html
+}
