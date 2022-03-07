@@ -58,6 +58,7 @@
   border-bottom: solid 1px rgb(212, 212, 212);
   z-index: 999;
 
+  cursor: pointer;
   /*위에서 아래로 수직 배치*/
   flex-direction: column;
 }
