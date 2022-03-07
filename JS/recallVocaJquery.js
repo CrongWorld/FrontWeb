@@ -31,6 +31,9 @@
    ]
  }
 
+ //영어 - 정답 세트
+ var englishAnswerSet  = new Array();
+
  for (var i in sampleVoca.voca) {
    var html = '';
    
@@ -49,6 +52,10 @@
    html += '</div > </div> </div> </div></div>'
    $(".swiper-wrapper").append(html);
  }
+ //영어 - 정답 세트 json화 
+ const englishAnswerSetJSON = JSON.stringify(englishAnswerSet);
+ console.log(englishAnswerSetJSON);
+
 
  /**
   * 
@@ -58,27 +65,35 @@
  function randomKoreanOption(optionNum){
   var html = '';
   var answerOptionNum = getRandomInt(1, 5, []);
-  //console.log("answer is: " + answerOptionNum + ' Which is: ' + sampleVoca.voca[optionNum].koreanMean);
+  console.log("answer is: " + optionNum + ' Which is: ' + sampleVoca.voca[optionNum].koreanMean);
+
+  //영어 voca - 한국말 뜻 정보 저장하기
+  var answerInfo = new Object();
+  answerInfo.vocaindex = optionNum;
+  answerInfo.englishVoca = sampleVoca.voca[optionNum].englishVoca;
+  answerInfo.koreanMeanOptionNum = answerOptionNum;
+  answerInfo.koreanMean = sampleVoca.voca[optionNum].koreanMean;
+  englishAnswerSet.push(answerInfo);
 
   if(answerOptionNum == 1){
-    var option2, oprion3, option4
+    var option2, option3, option4
     
-    html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += '<div class="randomKoreanMean" id="koreanMean1" onclick="testCall(' + 1 + ',' + 1 + ')"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
     html += sampleVoca.voca[i].koreanMean
     html += '</div></div>'
 
     option2 = getRandomInt(1, sampleVoca.voca.length, [i]);
-    html += '<div class="randomKoreanMean" id="koreanMean2"> <div class="koreanNum">2.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += '<div class="randomKoreanMean" id="koreanMean2" onclick="testCall(' + 1 + ',' + 2 + ')"> <div class="koreanNum">2.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
     html += sampleVoca.voca[option2].koreanMean
     html += '</div></div>'
 
     option3 = getRandomInt(1, sampleVoca.voca.length, [i, option2]);
-    html += '<div class="randomKoreanMean" id="koreanMean3"> <div class="koreanNum">3.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += '<div class="randomKoreanMean" id="koreanMean3" onclick="testCall(' + 1 + ',' + 3 + ')"> <div class="koreanNum">3.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
     html += sampleVoca.voca[option3].koreanMean
     html += '</div></div>'
 
     option4 = getRandomInt(1, sampleVoca.voca.length, [i, option2, option3]);
-    html += '<div class="randomKoreanMean" id="koreanMean4"> <div class="koreanNum">4.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += '<div class="randomKoreanMean" id="koreanMean4" onclick="testCall(' + 1 + ',' + 4 + ')"> <div class="koreanNum">4.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
     html += sampleVoca.voca[option4].koreanMean
     html += '</div></div>'
   }
@@ -87,22 +102,22 @@
     var option1, option3, option4
 
     option1 = getRandomInt(1, sampleVoca.voca.length, [i]);
-    html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += '<div class="randomKoreanMean" id="koreanMean1" onclick="testCall(' + 2 + ',' + 1 + ')"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
     html += sampleVoca.voca[option1].koreanMean
     html += '</div></div>'
 
 
-    html += '<div class="randomKoreanMean" id="koreanMean2"> <div class="koreanNum">2.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += '<div class="randomKoreanMean" id="koreanMean2" onclick="testCall(' + 2 + ',' + 2 + ')"> <div class="koreanNum">2.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
     html += sampleVoca.voca[i].koreanMean
     html += '</div></div>'
 
     option3 = getRandomInt(1, sampleVoca.voca.length, [i, option1]);
-    html += '<div class="randomKoreanMean" id="koreanMean3"> <div class="koreanNum">3.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += '<div class="randomKoreanMean" id="koreanMean3" onclick="testCall(' + 2 + ',' + 3 + ')"> <div class="koreanNum">3.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
     html += sampleVoca.voca[option3].koreanMean
     html += '</div></div>'
 
     option4 = getRandomInt(1, sampleVoca.voca.length, [i, option1, option3]);
-    html += '<div class="randomKoreanMean" id="koreanMean4"> <div class="koreanNum">4.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += '<div class="randomKoreanMean" id="koreanMean4" onclick="testCall(' + 2 + ',' + 4 + ')"> <div class="koreanNum">4.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
     html += sampleVoca.voca[option4].koreanMean
     html += '</div></div>'
   }
@@ -111,22 +126,22 @@
     var option1, option2, option4
 
     option1 = getRandomInt(1, sampleVoca.voca.length, [i]);
-    html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += '<div class="randomKoreanMean" id="koreanMean1" onclick="testCall(' + 3 + ',' + 1 + ')"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
     html += sampleVoca.voca[option1].koreanMean
     html += '</div></div>'
 
     option2 = getRandomInt(1, sampleVoca.voca.length, [i, option1]);
-    html += '<div class="randomKoreanMean" id="koreanMean2"> <div class="koreanNum">2.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += '<div class="randomKoreanMean" id="koreanMean2" onclick="testCall(' + 3 + ',' + 2 + ')"> <div class="koreanNum">2.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
     html += sampleVoca.voca[option2].koreanMean
     html += '</div></div>'
 
     
-    html += '<div class="randomKoreanMean" id="koreanMean3"> <div class="koreanNum">3.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += '<div class="randomKoreanMean" id="koreanMean3" onclick="testCall(' + 3 + ',' + 3 + ')"> <div class="koreanNum">3.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
     html += sampleVoca.voca[i].koreanMean
     html += '</div></div>'
 
     option4 = getRandomInt(1, sampleVoca.voca.length, [i, option1, option2]);
-    html += '<div class="randomKoreanMean" id="koreanMean4"> <div class="koreanNum">4.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += '<div class="randomKoreanMean" id="koreanMean4" onclick="testCall(' + 3 + ',' + 4 + ')"> <div class="koreanNum">4.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
     html += sampleVoca.voca[option4].koreanMean
     html += '</div></div>'
   }
@@ -135,27 +150,25 @@
     var option1, option2, option3
 
     option1 = getRandomInt(1, sampleVoca.voca.length, [i]);
-    html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += '<div class="randomKoreanMean" id="koreanMean1" onclick="testCall(' + 4 + ',' + 1 + ')"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
     html += sampleVoca.voca[option1].koreanMean
     html += '</div></div>'
 
     option2 = getRandomInt(1, sampleVoca.voca.length, [i, option1]);
-    html += '<div class="randomKoreanMean" id="koreanMean2"> <div class="koreanNum">2.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += '<div class="randomKoreanMean" id="koreanMean2" onclick="testCall(' + 4 + ',' + 2 + ')"> <div class="koreanNum">2.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
     html += sampleVoca.voca[option2].koreanMean
     html += '</div></div>'
 
     option3 = getRandomInt(1, sampleVoca.voca.length, [i, option1, option2]);
-    html += '<div class="randomKoreanMean" id="koreanMean3"> <div class="koreanNum">3.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += '<div class="randomKoreanMean" id="koreanMean3" onclick="testCall(' + 4 + ',' + 3 + ')"> <div class="koreanNum">3.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
     html += sampleVoca.voca[option3].koreanMean
     html += '</div></div>'
 
     
-    html += '<div class="randomKoreanMean" id="koreanMean4"> <div class="koreanNum">4.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += '<div class="randomKoreanMean" id="koreanMean4" onclick="testCall(' + 4 + ',' + 4 + ')"> <div class="koreanNum">4.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
     html += sampleVoca.voca[i].koreanMean
     html += '</div></div>'
   }
-
-  
 
   return html
 }
