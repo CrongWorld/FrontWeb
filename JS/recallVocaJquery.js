@@ -42,7 +42,7 @@
    html += '<p id=\"middleVoca\">'
    html += sampleVoca.voca[i].englishVoca
    html += '</p> </div> <div class=\"middleCard\" id=\"vocaKorean\" style=\"border: none;\">'
-   html += '<div class=\"middelCard\ hideCard" id = \"hideCard' + i + '\" onmouseover="setHideCardDiv('+ i +')"></div>'
+   html += '<div class=\"middelCard\ hideCard" id = \"hideCard' + i + '\"></div>'
    //여기서부터
    html += randomKoreanOption(i)
    //여기까지 대체
@@ -58,7 +58,7 @@
  function randomKoreanOption(optionNum){
   var html = '';
   var answerOptionNum = getRandomInt(1, 5, []);
-  console.log("answer is: " + answerOptionNum + ' Which is: ' + sampleVoca.voca[optionNum].koreanMean);
+  //console.log("answer is: " + answerOptionNum + ' Which is: ' + sampleVoca.voca[optionNum].koreanMean);
 
   if(answerOptionNum == 1){
     var option2, oprion3, option4
