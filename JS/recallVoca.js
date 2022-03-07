@@ -65,6 +65,10 @@ function setHideCardDiv(i){
    }
   }
 
+  function slideIndexCount(index){
+    alert(index+'번째 slide입니다.');
+  }
+
 
 
 

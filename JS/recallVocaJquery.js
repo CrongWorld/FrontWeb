@@ -57,8 +57,7 @@
   */
  function randomKoreanOption(optionNum){
   var html = '';
-  //var answerOptionNum = getRandomInt(1, 5, []);
-  var answerOptionNum = 1;
+  var answerOptionNum = getRandomInt(1, 5, []);
   console.log("answer is: " + answerOptionNum + ' Which is: ' + sampleVoca.voca[optionNum].koreanMean);
 
   if(answerOptionNum == 1){
@@ -69,7 +68,6 @@
     html += '</div></div>'
 
     option2 = getRandomInt(1, sampleVoca.voca.length, [i]);
-    console.log('option2: ' + option2 + ' which is: ' +sampleVoca.voca[option2].koreanMean)
     html += '<div class="randomKoreanMean" id="koreanMean2"> <div class="koreanNum">2.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
     html += sampleVoca.voca[option2].koreanMean
     html += '</div></div>'
@@ -82,6 +80,78 @@
     option4 = getRandomInt(1, sampleVoca.voca.length, [i, option2, option3]);
     html += '<div class="randomKoreanMean" id="koreanMean4"> <div class="koreanNum">4.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
     html += sampleVoca.voca[option4].koreanMean
+    html += '</div></div>'
+  }
+
+  else if(answerOptionNum == 2){
+    var option1, option3, option4
+
+    option1 = getRandomInt(1, sampleVoca.voca.length, [i]);
+    html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += sampleVoca.voca[option1].koreanMean
+    html += '</div></div>'
+
+
+    html += '<div class="randomKoreanMean" id="koreanMean2"> <div class="koreanNum">2.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += sampleVoca.voca[i].koreanMean
+    html += '</div></div>'
+
+    option3 = getRandomInt(1, sampleVoca.voca.length, [i, option1]);
+    html += '<div class="randomKoreanMean" id="koreanMean3"> <div class="koreanNum">3.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += sampleVoca.voca[option3].koreanMean
+    html += '</div></div>'
+
+    option4 = getRandomInt(1, sampleVoca.voca.length, [i, option1, option3]);
+    html += '<div class="randomKoreanMean" id="koreanMean4"> <div class="koreanNum">4.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += sampleVoca.voca[option4].koreanMean
+    html += '</div></div>'
+  }
+
+  else if(answerOptionNum == 3){
+    var option1, option2, option4
+
+    option1 = getRandomInt(1, sampleVoca.voca.length, [i]);
+    html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += sampleVoca.voca[option1].koreanMean
+    html += '</div></div>'
+
+    option2 = getRandomInt(1, sampleVoca.voca.length, [i, option1]);
+    html += '<div class="randomKoreanMean" id="koreanMean2"> <div class="koreanNum">2.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += sampleVoca.voca[option2].koreanMean
+    html += '</div></div>'
+
+    
+    html += '<div class="randomKoreanMean" id="koreanMean3"> <div class="koreanNum">3.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += sampleVoca.voca[i].koreanMean
+    html += '</div></div>'
+
+    option4 = getRandomInt(1, sampleVoca.voca.length, [i, option1, option2]);
+    html += '<div class="randomKoreanMean" id="koreanMean4"> <div class="koreanNum">4.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += sampleVoca.voca[option4].koreanMean
+    html += '</div></div>'
+  }
+
+  else if(answerOptionNum == 4){
+    var option1, option2, option3
+
+    option1 = getRandomInt(1, sampleVoca.voca.length, [i]);
+    html += '<div class="randomKoreanMean" id="koreanMean1"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += sampleVoca.voca[option1].koreanMean
+    html += '</div></div>'
+
+    option2 = getRandomInt(1, sampleVoca.voca.length, [i, option1]);
+    html += '<div class="randomKoreanMean" id="koreanMean2"> <div class="koreanNum">2.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += sampleVoca.voca[option2].koreanMean
+    html += '</div></div>'
+
+    option3 = getRandomInt(1, sampleVoca.voca.length, [i, option1, option2]);
+    html += '<div class="randomKoreanMean" id="koreanMean3"> <div class="koreanNum">3.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += sampleVoca.voca[option3].koreanMean
+    html += '</div></div>'
+
+    
+    html += '<div class="randomKoreanMean" id="koreanMean4"> <div class="koreanNum">4.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += sampleVoca.voca[i].koreanMean
     html += '</div></div>'
   }
 
@@ -99,7 +169,7 @@
  */
 function getRandomInt(min, max, except) {
   min = Math.ceil(min);
-  max = Math.floor(max+1);
+  max = Math.floor(max);
 
   while(1)
   {
