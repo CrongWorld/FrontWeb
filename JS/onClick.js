@@ -49,3 +49,7 @@ function clickStudentVoca() {
 function clickRememberVoca() {
   location.href = "../Pages/rememberVoca.html";
 }
+
+function clickRecallVoca(){
+  location.href = "../Pages/recallVoca.html";
+}
