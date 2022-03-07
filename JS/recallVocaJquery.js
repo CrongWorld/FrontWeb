@@ -31,6 +31,9 @@
    ]
  }
 
+ //영어 - 정답 세트
+ var englishAnswerSet  = new Array();
+
  for (var i in sampleVoca.voca) {
    var html = '';
    
@@ -49,6 +52,8 @@
    html += '</div > </div> </div> </div></div>'
    $(".swiper-wrapper").append(html);
  }
+ //영어 - 정답 세트 json화 
+ const englishAnswerSetJSON = JSON.stringify(englishAnswerSet);
 
  /**
   * 
@@ -58,7 +63,15 @@
  function randomKoreanOption(optionNum){
   var html = '';
   var answerOptionNum = getRandomInt(1, 5, []);
-  //console.log("answer is: " + answerOptionNum + ' Which is: ' + sampleVoca.voca[optionNum].koreanMean);
+  console.log("answer is: " + answerOptionNum + ' Which is: ' + sampleVoca.voca[optionNum].koreanMean);
+
+  //영어 voca - 한국말 뜻 정보 저장하기
+  var answerInfo = new Object();
+  answerInfo.vocaindex = optionNum;
+  answerInfo.englishVoca = sampleVoca.voca[optionNum].englishVoca;
+  answerInfo.koreanMeanOptionNum = answerOptionNum;
+  answerInfo.koreanMean = sampleVoca.voca[optionNum].koreanMean;
+  englishAnswerSet.push(answerInfo);
 
   if(answerOptionNum == 1){
     var option2, oprion3, option4
@@ -154,8 +167,6 @@
     html += sampleVoca.voca[i].koreanMean
     html += '</div></div>'
   }
-
-  
 
   return html
 }
