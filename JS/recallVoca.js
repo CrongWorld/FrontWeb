@@ -40,7 +40,8 @@ function slideCardHide(slideIndex){
 function studentOptionClicked(index, option){
   //alert(index + "번째 문제의 " + option + "번째 option을 선택!")
   if(englishAnswerSetObject.vocaAnswerSet[index].koreanMeanOptionNum == option){
-    alert("정답입니다!");
+    var clickedOptionDiv = document.getElementById("koreanMean"+index+option);
+    clickedOptionDiv.style.color = 'green';
   }
   else{
     alert("오답입니다!");
