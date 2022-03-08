@@ -33,6 +33,7 @@
 
 .middleVocaCard {
   border-radius: 10px;
+  width: 40vw;
   background-color: white;
   height: 50vh;
 }
