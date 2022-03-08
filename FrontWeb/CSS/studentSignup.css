@@ -1,0 +1,32 @@
+.signUpAll {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.signupButton {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 250px;
+}
+
+#buttonStyle {
+  margin-bottom: 30px;
+}
+
+.searchCode {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+.fa-search {
+  background-color: white;
+  border: 1px solid black;
+  border-left: none;
+  width: 3vw;
+  height: 5vh;
+  left: 20vw;
+  top: 3vh;
+}

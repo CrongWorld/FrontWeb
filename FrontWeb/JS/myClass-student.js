@@ -46,14 +46,6 @@ var classInfoArray = samepleClassInfo.classInfo;
 
 for(idx in classInfoArray)
 {
-    console.log(classInfoArray[idx].className)
-    //일케 하면 
-    /*
-    *DA_English_A반
-    testClass01
-    testClass02
-    */
-   //위의 것이 출력돼요.
    $(".leftConsoleDiv #getClasses").append("<div id=\"leftDivisions\">"+ classInfoArray[idx].className +"</div>")
 }
 
@@ -92,19 +84,24 @@ $("#main-teacherInfo").append(sampleUserInfo.clientName+" 선생님(" + sampleUs
 
 
 /**
- * 세트 정보 출력하기
+ * 학생 정보 출력하기
  */
-const sampleSetInfo=
+const sampleClassStudentInfo=
 {
     "classCode": "1111",
-    "setInfo":[
-        {"setCode": 0001, "setType": "word", "setName": "DA English 1 Sample"},
-        {"setCode": 0002, "setType": "word", "setName": "주니어 능률보카 기본 - DAY 01"},
-        {"setCode": 0003, "setType": "word", "setName": "(샘플) EBS 초등 5학년 영어단어"}
+    "studentInfo":[
+        {"studentIndex": 001, "studentId":"jjh63360", "studentName":"전준휘", "createAt":"2022/01/22 17:39"},
+        {"studentIndex": 002, "studentId":"tpdms0159", "studentName":"정세은", "createAt":"2022/01/23 13:21"},
+        {"studentIndex": 003, "studentId":"bigeyec", "studentName":"이도훈", "createAt":"2022/02/03 02:39"},
     ]
 }
 
-for(idx in sampleSetInfo.setInfo)
+for(idx in sampleClassStudentInfo.studentInfo)
 {
-    $(".setUnorderedList").append("<li onclick=\"clickStudentVoca()\" class = \"setNameList\"><div id=\"vocaType\"><img src=\"/FrontWeb/Images/classCardVoca.png\" alt=\"단어\"></div>" + sampleSetInfo.setInfo[idx].setName +"</li>")
+    $(".setUnorderedList").append("<li class = \"setNameList\"> <div class=\"student profilePic\"></div> <div id=\"std-info\"> <span id=\"std-name\">" + sampleClassStudentInfo.studentInfo[idx].studentName +"</span> " 
+    + "<span id=\"std-id\"> <br>" + sampleClassStudentInfo.studentInfo[idx].studentId + " (" +  sampleClassStudentInfo.studentInfo[idx].createAt +" 클래스 등록)</span>"+
+        "</div>"+
+    "</li>")
 }
+
+
