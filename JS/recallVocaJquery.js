@@ -77,22 +77,22 @@
   if(answerOptionNum == 1){
     var option2, option3, option4
     
-    html += '<div class="randomKoreanMean" id="koreanMean1" onclick="studentOptionClicked(' + optionNum + ',' + 1 + ')"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += '<div class="randomKoreanMean" id="koreanMean'+optionNum+1+'" onclick="studentOptionClicked(' + optionNum + ',' + 1 + ')"> <div class="koreanNum">1.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
     html += sampleVoca.voca[i].koreanMean
     html += '</div></div>'
 
     option2 = getRandomInt(1, sampleVoca.voca.length, [i]);
-    html += '<div class="randomKoreanMean" id="koreanMean2" onclick="studentOptionClicked(' + optionNum + ',' + 2 + ')"> <div class="koreanNum">2.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += '<div class="randomKoreanMean" id="koreanMean'+optionNum+2+'" onclick="studentOptionClicked(' + optionNum + ',' + 2 + ')"> <div class="koreanNum">2.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
     html += sampleVoca.voca[option2].koreanMean
     html += '</div></div>'
 
     option3 = getRandomInt(1, sampleVoca.voca.length, [i, option2]);
-    html += '<div class="randomKoreanMean" id="koreanMean3" onclick="studentOptionClicked(' + optionNum + ',' + 3 + ')"> <div class="koreanNum">3.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += '<div class="randomKoreanMean" id="koreanMean'+optionNum+3+'" onclick="studentOptionClicked(' + optionNum + ',' + 3 + ')"> <div class="koreanNum">3.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
     html += sampleVoca.voca[option3].koreanMean
     html += '</div></div>'
 
     option4 = getRandomInt(1, sampleVoca.voca.length, [i, option2, option3]);
-    html += '<div class="randomKoreanMean" id="koreanMean4" onclick="studentOptionClicked(' + optionNum + ',' + 4 + ')"> <div class="koreanNum">4.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
+    html += '<div class="randomKoreanMean" id="koreanMean'+optionNum+4+'" onclick="studentOptionClicked(' + optionNum + ',' + 4 + ')"> <div class="koreanNum">4.</div> <div class="pRadnKoreanMean" id="randKoreanMean1">'
     html += sampleVoca.voca[option4].koreanMean
     html += '</div></div>'
   }
