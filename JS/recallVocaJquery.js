@@ -9,7 +9,7 @@
    "setName": "DA_ENGLISH_A반 Sample Set",
    "voca": [
      { "vocaindex": 1, "englishVoca": "tree", "koreanMean": "나무" },
-     { "vocaindex": 2, "englishVoca": "airpod", "koreanMean": "에어팟" },
+     { "vocaindex": 2, "englishVoca": "airplane", "koreanMean": "비행기" },
      { "vocaindex": 3, "englishVoca": "camera", "koreanMean": "카메라" },
      { "vocaindex": 4, "englishVoca": "arduino", "koreanMean": "아두이노" },
      { "vocaindex": 5, "englishVoca": "banana", "koreanMean": "바나나" },
@@ -64,6 +64,8 @@
  function randomKoreanOption(optionNum){
   var html = '';
   var answerOptionNum = getRandomInt(1, 5, []);
+  console.log("answer is: " + optionNum + ' Which is: ' + sampleVoca.voca[optionNum].koreanMean);
+
   //영어 voca - 한국말 뜻 정보 저장하기
   var answerInfo = new Object();
   answerInfo.vocaindex = optionNum;
@@ -171,11 +173,10 @@
 }
 
 /**
- * 
  * @param {int} min 
- * @param {int[]} max 
- * @param {int} except
- * @returns 1~5사이의 정수형 integer
+ * @param {int} max 
+ * @param {int[]} except
+ * @returns min~max사이, except array 내부 원소를 제외한 정수형 integer
  */
 function getRandomInt(min, max, except) {
   min = Math.ceil(min);
@@ -195,6 +196,4 @@ function getRandomInt(min, max, except) {
     if(is_duplicated) continue;
     else return randVal;
   }
-}
-  
-  
+}  
