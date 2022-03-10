@@ -43,15 +43,18 @@ function studentOptionClicked(index, option){
   if(englishAnswerSetObject.vocaAnswerSet[index].koreanMeanOptionNum == option){
     var clickedOptionDiv = document.getElementById("koreanMean"+index+option);
     clickedOptionDiv.style.color = "rgb(101, 193, 140)";
-    clickedOptionDiv.style.border
+    clickedOptionDiv.style.border = "solid 2px rgb(101, 193, 140)"
   }
   else{
-    alert("오답입니다!");
+    var clickedOptionDiv = document.getElementById("koreanMean"+index+option);
+    clickedOptionDiv.style.animation="wrongAnswer 1s"
+    clickedOptionDiv.style.color = "rgb(220,20,60)";
+    clickedOptionDiv.style.border = "solid 2px rgb(220,20,60)"
+    //clickedOptionDiv.classList.remove("wrongAnswer");
+    
   }
 }
 
-  
-  
 var voices = [];
 function setVoiceList() {
   voices = window.speechSynthesis.getVoices();
