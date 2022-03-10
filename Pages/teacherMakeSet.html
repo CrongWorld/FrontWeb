@@ -22,30 +22,26 @@
             <div class="title-mainImgContents">
                 <a href="https://www.classcard.net/" style="text-decoration : none">
                     <div style="display : flex;">
-                        <a href="https://www.classcard.net/" style="text-decoration : none">
-                            <p id="mainLeftTopImg">CLASS CARD</P>
+                        <a href="/Pages/signedUpMainPage-teacher.html" style="text-decoration : none">
+                            <p id="mainLeftTopImg">
+                                <button class="button is-small"><</button>
+                                돌아가기
+                            </P>
                         </a>
                     </div>
                 </a>
             </div>
             <div class="title-mainContents">
-                <div id="searchSet">
-                    <a onclick="clickSearchSet()"><img src="/FrontWeb/Images/serchSet.png"></a>
-                </div>
-                <div id="makeSet">
-                    <img src="/FrontWeb/Images/makeSet.png">
-                </div>
             </div>
             <div class="title-loginContents">
-                <a onclick="clickLogin()" class="user profilePic"></a>
-                <div class="userLoginInfo" style="margin-left: 20px;"><label id="name" style="font-weight: bolder;"></label> <label id="studentOrTeacher"></label></div>
+                <button class="button is-success">세트 저장하기</button>
             </div>
         </div>
     </div>
     <div class="mainInfo">
         <table class="mainInfoTable">
             <tbody>
-                <tr>
+                <tr>    
                     <td class="mainInfoTable-0pky" colspan="2">
                         <button class="button is-active" style="color: rgb(104, 203, 28); font-weight: 600; border-color: rgb(104, 203, 28);">단어</button>
                         <input class="input" id="inputSetName" type="text" placeholder="세트명을 입력하세요.(예: 중1 영어 천재교과서 1과)">
@@ -84,55 +80,20 @@
             </tbody>
         </table>
     </div>
-    <div class="gameList">
-        <div class="gameListContents">
-            <button class="button is-rounded" id="gameSelectButtons">스피킹</button>
-            <button class="button is-rounded" id="gameSelectButtons">매칭</button>
-            <button class="button is-rounded" id="gameSelectButtons">크래시</button>
-        </div>
-    </div>
     <div class="mainContents" id="vocaCard">
-        <div class="vocaSection">
-            <div id="sectionNum">1구간</div>
-            <div id="vocaSectionButton">
-                <button class="button is-rounded" id="vocaSectionButtons" onclick="clickRememberVoca()">암기학습</button>
-                <button class="button is-rounded" id="vocaSectionButtons" onclick="clickRecallVoca()">리콜학습</button>
-                <button class="button is-rounded" id="vocaSectionButtons" style="margin-right: 20px;">스펠학습</button>
+        <div class="main-LeftVocaContent">
+            <div id="englishVocaHeader">
+                <div id="englishVocaHeaderTxt">단어</div>
+                <div id="languageList">english</div>
+            </div>
+
+            <div class="questionContent">
+                <div class="questionNumber">1</div>
+                <input class="input is-normal" id="questionEnglishInput" type="text" placeholder="Normal input">
             </div>
         </div>
-        <div style="display: flex; flex-direction: row;">
-            <div class="container">
-                <div class="front card">dudk000</div>
-                <div class="back card">아아아ㅏㅇ</div>
-            </div>
 
-            <div class="container">
-                <div class="front card">dudk000</div>
-                <div class="back card">아아아ㅏㅇ</div>
-            </div>
-
-            <div class="container">
-                <div class="front card">dudk000</div>
-                <div class="back card">아아아ㅏㅇ</div>
-            </div>
-
-        </div>
-
-        <div style="display: flex; flex-direction: row;">
-            <div class="container">
-                <div class="front card">dudk000</div>
-                <div class="back card">아아아ㅏㅇ</div>
-            </div>
-
-            <div class="container">
-                <div class="front card">dudk000</div>
-                <div class="back card">아아아ㅏㅇ</div>
-            </div>
-
-            <div class="container">
-                <div class="front card">dudk000</div>
-                <div class="back card">아아아ㅏㅇ</div>
-            </div>
+        <div class="main-RightVocaContent"> 
 
         </div>
     </div>
