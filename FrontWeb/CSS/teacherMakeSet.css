@@ -77,10 +77,9 @@
     border-color: inherit;
     color: #ffffff;
     font-family: "Arial Black", Gadget, sans-serif !important;
-    font-size: 36px;
+    font-size: 14px;
     font-weight: bold;
-    text-align: left;
-    vertical-align: top
+    padding: auto;
 }
 
 .mainInfoTable .mainInfoTable-0pky {
@@ -88,10 +87,40 @@
     text-align: left;
     vertical-align: top;
     font-size: 18px;
-    font-weight: 450;
+    font-weight: 600;
     color: white;
     padding: 1px;
 }
+
+.input{
+    background-color: rgb(104, 203, 28);
+    border: 0px;
+    border-bottom: 1px solid white;
+}
+
+#inputSetName{
+    width: 50vw;
+    font-size: 15px;   
+}
+
+#inputLink{
+    font-size: 12px;
+    width: 30vw;
+}
+
+input::placeholder{
+    color:rgb(228, 222, 222);
+    font-weight: 600;
+}
+
+.mainButtons{
+    background-color: rgb(104, 203, 28);
+    border: 0px;
+    color: rgba(255, 255, 255, 0.884);
+    font-size: 14px;
+    font-weight: 800;
+}
+
 
 #mainLeftTopImg {
     margin: 30px;
