@@ -231,3 +231,12 @@ body {
   align-content: center;
   flex-direction: column;
 }
+
+@keyframes wrongAnswer {
+  0%   {left:0px;}
+  20%  {left:20px;}
+  40%  {left:-30px;}
+  60%  {left:30px;}
+  80%  {left:-30px;}
+  100% {left:20px;}
+}
