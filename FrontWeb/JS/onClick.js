@@ -64,3 +64,6 @@ function clickWordSetLoading(){
 function clickWordSetLeftLoading(){
   location.href= "../pages/WordSetLeftLoading.html";
 }
+function clickWordSetDeleteOverlap(){
+  location.href= "../pages/WordSetDeleteOverlap.html";
+}
