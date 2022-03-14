@@ -38,8 +38,8 @@
    html += '<div class=\"swiper-slide\">'
    html += '<div> <div class=\"topVocaCard\"> <p style=\"color: greenyellow;\"> v0 | </p>'
    html += ' <p style=\"color: white;\"> 10 </p> </div> <div class=\"middleVocaCard\">'
-   html += '<div id=\"topCard\"> <img src=\"../Images/volume.png\" id=\"topCardImg\">'
-   html += '<img src=\"../Images/star.png\" id=\"topCardImg\"> </div> <div class=\"middleCard\" id=\"vocaEnglish\">'
+   html += '<div id=\"topCard\"> <img src=\"/FrontWeb/Images/volume.png\" id=\"topCardImg\">'
+   html += '<img src=\"/FrontWeb/Images/star.png\" id=\"topCardImg\"> </div> <div class=\"middleCard\" id=\"vocaEnglish\">'
    html += '<p id=\"middleVoca\">'
    html += sampleVoca.voca[i].englishVoca
    html += '</p> </div> <div class=\"middleCard\" id=\"vocaKorean\" style=\"border: none;\">'

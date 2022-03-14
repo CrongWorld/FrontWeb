@@ -1,5 +1,5 @@
 function clickClasscard() { // 클래스카드 홈페이지로 이동
-  location.href = "https://www.classcard.net/";
+  location.href = "../Pages/mainPage.html";
 }
 
 function clickMyClass() { // 나의 클래스로 이동
@@ -48,4 +48,8 @@ function clickStudentVoca() {
 }
 function clickRememberVoca() {
   location.href = "../Pages/rememberVoca.html";
+}
+
+function clickRecallVoca(){
+  location.href = "../Pages/recallVoca.html";
 }

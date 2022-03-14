@@ -13,7 +13,7 @@
  
  for(idx in sampleReportInfo.setInfo)
  {
-     $(".reportUnorderedList").append("<li class = \"reportNameList\"><div id=\"vocaType\"><img src=\"../Images/classCardVoca.png\" alt=\"단어\"></div><p style = \"margin-left : 10px;\">" + sampleReportInfo.setInfo[idx].setName +"</p></li>")
+     $(".reportUnorderedList").append("<li class = \"reportNameList\"><div id=\"vocaType\"><img src=\"/FrontWeb/Images/classCardVoca.png\" alt=\"단어\"></div><p style = \"margin-left : 10px;\">" + sampleReportInfo.setInfo[idx].setName +"</p></li>")
  }
  
 //  const reportTable = document.getElementById(reportTable);
@@ -42,7 +42,7 @@
   //  newCell4.innerText = sampleStudentReport[0].studentInfo.id;
 
   for (idx in sampleStudentReport.studentInfo) {
-    $("#reportTable").append("<tr><td v-if=\"studentInfo\" rowspan = \"2\" id =\"reportTd\"><img src = \"../Images/default_photo.png\" style = \"border-radius : 50px; \" id=\"reportImg\"></td><td class = \"studentName\" id = \"student\" style=\"border: solid 1px rgb(230, 230, 230); border-width: 1px 1px 0 0; \">" + sampleStudentReport.studentInfo[idx].name + "</td><td v-if=\"studentInfo\" id=\"reportTd\">" + sampleStudentReport.studentInfo[idx].speaking + "</td><td id=\"reportTd\">" + sampleStudentReport.studentInfo[idx].remember + "</td><td v-if=\"studentInfo\" id=\"reportTd\">" + sampleStudentReport.studentInfo[idx].recall + "</td><td v-if=\"studentInfo\" id=\"reportTd\">" + sampleStudentReport.studentInfo[idx].spell + "</td><td id=\"reportTd\">" + sampleStudentReport.studentInfo[idx].repeat + "</td><td v-if=\"studentInfo\" id=\"reportTd\">"  + sampleStudentReport.studentInfo[idx].test + "</td></tr>");
+    $("#reportTable").append("<tr><td v-if=\"studentInfo\" rowspan = \"2\" id =\"reportTd\"><img src = \"/FrontWeb/Images/default_photo.png\" style = \"border-radius : 50px; \" id=\"reportImg\"></td><td class = \"studentName\" id = \"student\" style=\"border: solid 1px rgb(230, 230, 230); border-width: 1px 1px 0 0; \">" + sampleStudentReport.studentInfo[idx].name + "</td><td v-if=\"studentInfo\" id=\"reportTd\">" + sampleStudentReport.studentInfo[idx].speaking + "</td><td id=\"reportTd\">" + sampleStudentReport.studentInfo[idx].remember + "</td><td v-if=\"studentInfo\" id=\"reportTd\">" + sampleStudentReport.studentInfo[idx].recall + "</td><td v-if=\"studentInfo\" id=\"reportTd\">" + sampleStudentReport.studentInfo[idx].spell + "</td><td id=\"reportTd\">" + sampleStudentReport.studentInfo[idx].repeat + "</td><td v-if=\"studentInfo\" id=\"reportTd\">"  + sampleStudentReport.studentInfo[idx].test + "</td></tr>");
     $("#reportTable").append("<tr><td v-if=\"studentInfo\" id = \"student\">" + sampleStudentReport.studentInfo[idx].id + "</td><td id=\"reportTd\">N</td><td id=\"reportTd\">N</td><td id=\"reportTd\">N</td><td id=\"reportTd\">N</td><td id=\"reportTd\">N</td><td id=\"reportTd\">N</td></tr>")
   }
 

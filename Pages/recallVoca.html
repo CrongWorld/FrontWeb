@@ -3,19 +3,23 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA_Compatible" content="IE=edge">
   <meta name="viewport" content="width= device-width">
   <meta http-equiv="ontent-Security-Policy" content="upgrade-insecure-requests">
   <meta name='google' value='notranslate'>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="/CSS/studentVocaMain.css">
-  <link rel="stylesheet" href="/CSS/rememberVoca.css">
+  <link rel="stylesheet" href="/FrontWeb/CSS/studentVocaMain.css">
+  <link rel="stylesheet" href="/FrontWeb/CSS/recallVoca.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="/FrontWeb/JS/recallVoca.js"></script>
   <title>클래스카드 | 영어쌤 1/3이 선택한 스마트 단어장</title>
 </head>
 
@@ -120,12 +124,12 @@
   </div>
 <div class="swiper-button-next"></div>
 <div class="swiper-button-prev"></div>
-</div>
-  <script src="http://code.jquery.com/jquery-latest.js"></script>
-  <script type="text/javascript" src="/JS/rememberVocaJquery.js"></script>
-  <script type="text/javascript" src="/JS/rememberVoca.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</div>  
+  <script type="text/javascript" src="/FrontWeb/JS/recallVocaJquery.js"></script>
   <script>
+    /**
+     * swiper
+     */
     var swiper = new Swiper(".mySwiper", {
       loop: true,
       slidesPerView: 1,
@@ -136,10 +140,17 @@
       keyboard: {
         enabled: true,
       },
+      on: {
+        activeIndexChange: function () {
+          slideCardHide(this.realIndex)
+        }
+      },
       observer: true,
       observeParents: true,
-    });    
+    }); 
+
   </script>
+  <link rel="stylesheet" href="/FrontWeb/CSS/recallVocaEffect.css">
 </body>
 
 </html>

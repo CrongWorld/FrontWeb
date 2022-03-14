@@ -162,7 +162,8 @@
 }
 
 .profilePic {
-background-image: url('/Images/default_photo.png');
+background-image: url('/FrontWeb/Images/default_photo.png');
+
 }
 
 
