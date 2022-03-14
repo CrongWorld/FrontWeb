@@ -9,7 +9,7 @@
     <meta name="viewport" content="width= device-width">
     <meta http-equiv="ontent-Security-Policy" content="upgrade-insecure-requests">
     <meta name='google' value='notranslate'>
-    <link rel="stylesheet" href="/FrontWeb/CSS/WordSetLoading.css">
+    <link rel="stylesheet" href="/FrontWeb/CSS/WordSetLeftLoading.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
@@ -45,19 +45,20 @@
                     </div>
                     <div class="bottom-container">
                       <div class="left">
-                        <p class="first-p">단어, 의미, 예문이 분리된 엑셀/한글 데이터</p>
-                        <p class="second-p">의미와 예문은 없어도 됩니다.</p>
-                        <img src="../Frontweb/Images/word_excel_img.png">
-              
+                        <p class="first-p">엑셀, 한글 파일에서 <span class="red">단어, 의미, 예문</span>부분을 복사하여
+                            아래에 붙여 넣으세요.</p>
+                        <p class="second-p">! 의미와 예문은 없어도 됩니다.</p>           
                       </div>
                       <div class="right">
-                        <p>단어, 의미가 연결된 텍스트 데이터</p>
-                        <img src="../Frontweb/Images/word_text_img.png">
+                        <img src="../Frontweb/Images/../Images/word_excel_img.png">
                       </div>
                     </div>
-                    <div class="next-container">
-                      <a class="next" onclick="clickWordSetLeftLoading()" >
-                        다음 &#62;
+                    <div class= "input-container">
+                        <input class="input-text" type="text" placeholder="붙여넣기 (ctrl+V)하세요.">
+                    </div>
+                    <div class="prev-container">
+                      <a class="prev" onclick="clickWordSetLoading()" >
+                        &#60; 이전
                       </a>
                     </div>
                   </div>

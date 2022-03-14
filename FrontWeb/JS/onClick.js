@@ -61,6 +61,6 @@ function clickTeacherMakeSet(){
 function clickWordSetLoading(){
   location.href= "../pages/WordSetLoading.html";
 }
-function clickWordSetExcelLoading(){
-  location.href= "../pages/WordSetExcelLoading.html";
+function clickWordSetLeftLoading(){
+  location.href= "../pages/WordSetLeftLoading.html";
 }
