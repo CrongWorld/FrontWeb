@@ -526,6 +526,7 @@ input::placeholder{
 
   .button-container .left-button{
     color: #7f5ac8;
+    border-color: #7f5ac8;
     background-color: #fff;
     margin-right: 20px; 
   }
