@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="window">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA_Compatible" content="IE=edge">
+    <meta name="viewport" content="width= device-width">
+    <meta http-equiv="ontent-Security-Policy" content="upgrade-insecure-requests">
+    <meta name='google' value='notranslate'>
+    <link rel="stylesheet" href="/FrontWeb/CSS/WordSetLeftLoading.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <title>클래스카드 | 영어쌤 1/3이 선택한 스마트 단어장</title>
+</head>
+
+<body>
+    
+    <div class="titleShadowBox">
+        <div class="titleContents">
+            <div class="title-mainImgContents">
+                <a href="https://www.classcard.net/" style="text-decoration : none">
+                    <div style="display : flex;">
+                        <a href="/Pages/signedUpMainPage-teacher.html" style="text-decoration : none">
+                            <p id="mainLeftTopImg">
+                                <button class="button is-small">&#60;</button>
+                                돌아가기
+                            </P>
+                        </a>
+                    </div>
+                </a>
+            </div>
+            <div class="title-mainContents">
+            </div>
+
+            <div class="title-loginContents">
+                <button class="button is-success">세트 저장하기</button>
+                <div class="overlay">
+                  <div class="loading-container">
+                    <div class="header"> 
+                      <p class="header-text">엑셀, 한글자료 가져오기</p>
+                      <button class="header-button" onclick="clickTeacherMakeSet()"> x </button>
+                    </div>
+                    <div class="bottom-container">
+                      <div class="left">
+                        <p class="first-p">엑셀, 한글 파일에서 <span class="red">단어, 의미, 예문</span>부분을 복사하여
+                            아래에 붙여 넣으세요.</p>
+                        <p class="second-p">! 의미와 예문은 없어도 됩니다.</p>           
+                      </div>
+                      <div class="right">
+                        <img src="../Frontweb/Images/../Images/word_excel_img.png">
+                      </div>
+                    </div>
+                    <div class= "input-container">
+                        <input class="input-text" type="text" placeholder="붙여넣기 (ctrl+V)하세요.">
+                    </div>
+                    <div class="prev-container">
+                      <a class="prev" onclick="clickWordSetLoading()" >
+                        &#60; 이전
+                      </a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mainInfo">
+        <table class="mainInfoTable">
+            <tbody>
+                <tr>    
+                    <td class="mainInfoTable-0pky" colspan="2">
+                        <button class="button is-active" style="color: rgb(104, 203, 28); font-weight: 600; border-color: rgb(104, 203, 28);">단어</button>
+                        <input class="input" id="inputSetName" type="text" placeholder="세트명을 입력하세요.(예: 중1 영어 천재교과서 1과)">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="mainInfoTable-b3uz" colspan="2">
+                        🔗학생에게 전달할 학습자료
+                        <input class="input" id="inputLink" type="text" placeholder="https://www.youtube.com/watch?v=L7OLY4HCctQ&ab_channel=NikonAsia">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="mainInfoTable-0pky" colspan="2"></td>
+                </tr>
+                <tr>
+                    <td class="mainInfoTable-0pky">
+                        <button class="button mainButtons">
+                            엑셀, 워드자료 가져오기
+                          </button>
+                          <button class="button mainButtons">
+                            본문자료 추출하기
+                          </button>
+                          <button class="button mainButtons">
+                            정렬
+                          </button>
+                          <button class="button mainButtons">
+                            중복찾기
+                          </button>
+                          <button class="button mainButtons">
+                            권한설정
+                          </button>
+
+                    </td>
+                    <td class="mainInfoTable-0pky"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="mainContents" id="vocaCard">
+        <div class="main-LeftVocaContent">
+            <div id="englishVocaHeader">
+                <div id="englishVocaHeaderTxt">단어</div>
+                <div id="languageList">english</div>
+            </div>
+
+            <div class="questionContent">
+                <div class="questionNumber">1</div>
+                <input class="input is-normal" id="questionEnglishInput" type="text" placeholder="Algorithm">
+            </div>
+            <div class="questionContent">
+                <div class="questionNumber">2</div>
+                <input class="input is-normal" id="questionEnglishInput" type="text">
+            </div>
+            <div class="questionContent">
+                <div class="questionNumber">3</div>
+                <input class="input is-normal" id="questionEnglishInput" type="text">
+            </div>
+            <div class="questionContent">
+                <div class="questionNumber">4</div>
+                <input class="input is-normal" id="questionEnglishInput" type="text">
+            </div>
+            <div class="questionContent">
+                <div class="questionNumber">5</div>
+                <input class="input is-normal" id="questionEnglishInput" type="text">
+            </div>
+            <div class="questionContent">
+                <div class="questionNumber">6</div>
+                <input class="input is-normal" id="questionEnglishInput" type="text">
+            </div>
+            <div class="questionContent">
+                <div class="questionNumber">7</div>
+                <input class="input is-normal" id="questionEnglishInput" type="text">
+            </div>
+            <div class="questionContent">
+                <div class="questionNumber">8</div>
+                <input class="input is-normal" id="questionEnglishInput" type="text">
+            </div>
+            <div class="questionContent">
+                <div class="questionNumber">9</div>
+                <input class="input is-normal" id="questionEnglishInput" type="text">
+            </div>
+            <div class="questionContent">
+                <div class="questionNumber">10</div>
+                <input class="input is-normal" id="questionEnglishInput" type="text">
+            </div>
+            <div class="questionContent">
+                <div class="questionNumber">11</div>
+                <input class="input is-normal" id="questionEnglishInput" type="text">
+            </div>
+            <div class="questionContent">
+                <div class="questionNumber">12</div>
+                <input class="input is-normal" id="questionEnglishInput" type="text">
+            </div>
+            <div class="questionContent">
+                <div class="questionNumber">13</div>
+                <input class="input is-normal" id="questionEnglishInput" type="text">
+            </div>
+            <div class="questionContent">
+                <div class="questionNumber">14</div>
+                <input class="input is-normal" id="questionEnglishInput" type="text">
+            </div>
+            <div class="questionContent">
+                <div class="questionNumber">15</div>
+                <input class="input is-normal" id="questionEnglishInput" type="text">
+            </div>
+
+        </div>
+
+        <div class="main-RightVocaContent"> 
+            <div id="koreanAnsHeader">
+                <div id="koreanVocaHeaderTxt">의미</div>
+            </div>
+
+            <div class="questionContent">
+                <input class="input is-normal" id="answerKoreanInput" type="text" placeholder="명. 알고리즘">
+            </div>
+            <div class="questionContent">
+                <input class="input is-normal" id="answerKoreanInput" type="text">
+            </div>
+            <div class="questionContent">
+                <input class="input is-normal" id="answerKoreanInput" type="text">
+            </div>
+            <div class="questionContent">
+                <input class="input is-normal" id="answerKoreanInput" type="text">
+            </div>
+            <div class="questionContent">
+                <input class="input is-normal" id="answerKoreanInput" type="text">
+            </div>
+            <div class="questionContent">
+                <input class="input is-normal" id="answerKoreanInput" type="text">
+            </div>
+            <div class="questionContent">
+                <input class="input is-normal" id="answerKoreanInput" type="text">
+            </div>
+            <div class="questionContent">
+                <input class="input is-normal" id="answerKoreanInput" type="text">
+            </div>
+            <div class="questionContent">
+                <input class="input is-normal" id="answerKoreanInput" type="text">
+            </div>
+            <div class="questionContent">
+                <input class="input is-normal" id="answerKoreanInput" type="text">
+            </div>
+            <div class="questionContent">
+                <input class="input is-normal" id="answerKoreanInput" type="text">
+            </div>
+            <div class="questionContent">
+                <input class="input is-normal" id="answerKoreanInput" type="text">
+            </div>
+            <div class="questionContent">
+                <input class="input is-normal" id="answerKoreanInput" type="text">
+            </div>
+            <div class="questionContent">
+                <input class="input is-normal" id="answerKoreanInput" type="text">
+            </div>
+            <div class="questionContent">
+                <input class="input is-normal" id="answerKoreanInput" type="text">
+            </div>
+
+
+            
+        </div>
+    </div>
+
+  
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!--jquery로 동적인 페이지를 나타내는 js. 일단 주석처리!-->
+    <!-- <script type="text/javascript" src="/FrontWeb/JS/studentSentenceMain.js"></script> -->
+    <script type="text/javascript" src="/FrontWeb/JS/onClick.js"></script>
+</body>
+
+</html>

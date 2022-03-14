@@ -53,3 +53,14 @@ function clickRememberVoca() {
 function clickRecallVoca(){
   location.href = "../Pages/recallVoca.html";
 }
+
+function clickTeacherMakeSet(){
+  location.href= "../pages/TeacherMakeSet.html";
+}
+
+function clickWordSetLoading(){
+  location.href= "../pages/WordSetLoading.html";
+}
+function clickWordSetLeftLoading(){
+  location.href= "../pages/WordSetLeftLoading.html";
+}
