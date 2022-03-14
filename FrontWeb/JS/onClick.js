@@ -58,9 +58,9 @@ function clickTeacherMakeSet(){
   location.href= "../pages/TeacherMakeSet.html";
 }
 
+function clickWordSetLoading(){
+  location.href= "../pages/WordSetLoading.html";
+}
 function clickWordSetExcelLoading(){
   location.href= "../pages/WordSetExcelLoading.html";
-}
-function clickWordSetExcelLoading_2(){
-  location.href= "../pages/WordSetExcelLoading_2.html";
 }
