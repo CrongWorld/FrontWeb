@@ -57,3 +57,7 @@ function clickRecallVoca(){
 function clickTeacherMakeSet(){
   location.href= "../pages/TeacherMakeSet.html";
 }
+
+function clickWordSetExcelLoading(){
+  location.href= "../pages/WordSetExcelLoading.html";
+}
