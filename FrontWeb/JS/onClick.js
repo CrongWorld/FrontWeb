@@ -67,3 +67,9 @@ function clickWordSetLeftLoading(){
 function clickWordSetDeleteOverlap(){
   location.href= "../pages/WordSetDeleteOverlap.html";
 }
+function clickWordSetOpenAlert(){
+  location.href= "../pages/WordSetOpenAlert.html"
+}
+function clickWordSetSetting(){
+  location.href= "../pages/WordSetSetting.html"
+}

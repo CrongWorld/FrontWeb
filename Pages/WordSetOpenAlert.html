@@ -9,7 +9,7 @@
     <meta name="viewport" content="width= device-width">
     <meta http-equiv="ontent-Security-Policy" content="upgrade-insecure-requests">
     <meta name='google' value='notranslate'>
-    <link rel="stylesheet" href="/FrontWeb/CSS/WordSetSetting.css">
+    <link rel="stylesheet" href="/FrontWeb/CSS/WordSetOpenAlert.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
@@ -52,12 +52,36 @@
                         </span>
                       </p>
                       <div class="open">
-                        <input type="radio" onclick="clickWordSetOpenAlert()">
+                        <input type="radio" onclick="">
                         <p>모든 사용자에게 공개</p>
                       </div>
                       <div class="close">
                         <input type="radio">
                         <p>비공개</p>
+                      </div>
+                      
+                      <div class="overlay">
+                        
+                        <div class="alert-container">
+                          <div class="header-container">
+                            <a class="alert-header" onclick="clickWordSetSetting()">
+                              X
+                            </a>
+                          </div>
+                          <div class="p-container">
+                            <p>시중 교재 등 저작권이 있는 자료를
+                              누구나 이용할 수 있도록 공개하면 법률에 저촉될 수 있으니
+                              주의해 주세요. 또 원작자의 컨텐츠 보호 요청이 오면 삭제 될 수 있습니다.
+                              공개할까요?
+                            </p>
+                          </div>
+                          <div class="button-container">
+                            <button class= "left-button" onclick="clickWordSetSetting()">취소</button>
+                            <button class= "right-button" onclick="clickWordSetSetting()">공개하기</button>
+                          </div>
+                        </div>
+
+      
                       </div>
                                         
                         <p class="second-line">세트 수정 허용</p>
