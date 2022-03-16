@@ -64,3 +64,24 @@ function clickWordSetLoading(){
 function clickWordSetLeftLoading(){
   location.href= "../pages/WordSetLeftLoading.html";
 }
+function clickWordSetDeleteOverlap(){
+  location.href= "../pages/WordSetDeleteOverlap.html";
+}
+function clickWordSetOpenAlert(){
+  location.href= "../pages/WordSetOpenAlert.html";
+}
+function clickWordSetSetting(){
+  location.href= "../pages/WordSetSetting.html";
+}
+function clickWordSetExtract(){
+  location.href="../pages/WordSetExtract.html";
+}
+function WordSetAlign(){
+  location.href="../pages/WordSetAlign.html";
+}
+function WordSetOverlap(){
+  location.href="../pages/WordSetOverlap.html";
+}
+function WordSetSetting(){
+  location.href="../pages/WordSetSetting.html";
+}

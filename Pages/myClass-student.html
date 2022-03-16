@@ -31,7 +31,7 @@
             <a><img src="/FrontWeb/Images/serchSet.png" onclick='clickSearchSet()'></a>
           </div>
           <div id="makeSet">
-            <img src="/FrontWeb/Images/makeSet.png">
+            <img src="/FrontWeb/Images/makeSet.png" onclick="clickTeacherMakeSet()">
           </div>
           <div class="title-loginContents">
             <a href="/Pages/login.html" class="user profilePic"></a>
@@ -45,7 +45,8 @@
       <div class="main-leftConsole">
         <div class="leftConsoleDiv">
           <div id="leftDivisions">
-            <div style="float: left;">나의 클래스</div>
+            <a onclick="clickMyClass()" style="float: left;">나의 클래스</a>
+            <!-- <div style="float: left;">나의 클래스</div> -->
             <div style="float:right;margin-left: 10px;">
               <div class="classesRight" id="classesPlus" style="float: left; padding-right: 10px;">➕</div>
               <div class="classesRight" id="classesSetting" style="float: left; padding-right: 10px;">⚙️</div>

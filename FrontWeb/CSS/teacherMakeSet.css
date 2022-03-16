@@ -159,6 +159,7 @@ input::placeholder{
     align-items: center;
     justify-content: center;
     color: white;
+    cursor: pointer;
     /* background-color: blue; */
 }
 

@@ -10,7 +10,7 @@
     <meta http-equiv="ontent-Security-Policy" content="upgrade-insecure-requests">
     <meta name='google' value='notranslate'>
     <link rel="stylesheet" href="/FrontWeb/CSS/teacherMakeSet.css">
-    <link rel="stylesheet" href="/FrontWeb/CSS/WordSetExtract.css">
+    <link rel="stylesheet" href="/FrontWeb/CSS/WordSetOpenAlert.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
@@ -41,23 +41,61 @@
                 <div class="overlay">
                   <div class="loading-container">
                     <div class="header"> 
-                      <p class="header-text">1단계-본문 붙여넣기</p>
+                      <p class="header-text">세트 권한 설정</p>
                       <button class="header-button" onclick="clickTeacherMakeSet()"> x </button>
                     </div>
-                    <div class="bottom-container">
-                      <div class="left">
-                        <p class="first-p">단어를 추출할 본문의 텍스트를</p>
-                        <p class="second-p">복사<span class="bold">(Control-C)</span>하여 아래에 붙여 넣으세요.</p>           
+                    
+                    <div class="setting-container">
+                      <p class="first-line">세트 공개 여부
+                        <span class="first-line-span">
+                          (<span class="color">만든세트>공개여부 설정</span>
+                          에서 일괄 설정 가능)
+                        </span>
+                      </p>
+                      <div class="open">
+                        <input type="radio" onclick="">
+                        <p>모든 사용자에게 공개</p>
                       </div>
-                      <div class="right">
-                        <img src="../Frontweb/Images/../Images/extractword.png">
+                      <div class="close">
+                        <input type="radio">
+                        <p>비공개</p>
                       </div>
-                    </div>
-                    <div class= "input-container">
-                        <input class="input-text" type="text" placeholder="본문 텍스트를 붙여 넣으세요 (Control V)">
+                      
+                      <div class="overlay">
+                        
+                        <div class="alert-container">
+                          <div class="header-container">
+                            <a class="alert-header" onclick="clickWordSetSetting()">
+                              X
+                            </a>
+                          </div>
+                          <div class="p-container">
+                            <p>시중 교재 등 저작권이 있는 자료를
+                              누구나 이용할 수 있도록 공개하면 법률에 저촉될 수 있으니
+                              주의해 주세요. 또 원작자의 컨텐츠 보호 요청이 오면 삭제 될 수 있습니다.
+                              공개할까요?
+                            </p>
+                          </div>
+                          <div class="button-container">
+                            <button class= "left-button" onclick="clickWordSetSetting()">취소</button>
+                            <button class= "right-button" onclick="clickWordSetSetting()">공개하기</button>
+                          </div>
+                        </div>      
+                      </div>
+                                        
+                        <p class="second-line">세트 수정 허용</p>
+                        <div class="allow">
+                          <input type="radio">
+                          <p>다른 사용자의 수정을 허용(삭제불가)</p>
+                        </div>
+                        <div class="forbid">
+                          <input type="radio">
+                          <p>나만 수정</p>
+                        </div>               
+                      
                     </div>
                     <div class="button-container">
-                      <button>단어 추출하기</button>
+                      <button onclick="clickTeacherMakeSet()">확인</button>
                     </div>
                   </div>
                 </div>

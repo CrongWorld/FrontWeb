@@ -10,7 +10,7 @@
     <meta http-equiv="ontent-Security-Policy" content="upgrade-insecure-requests">
     <meta name='google' value='notranslate'>
     <link rel="stylesheet" href="/FrontWeb/CSS/teacherMakeSet.css">
-    <link rel="stylesheet" href="/FrontWeb/CSS/WordSetExtract.css">
+    <link rel="stylesheet" href="/FrontWeb/CSS/WordSetDeleteOverlap.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
@@ -40,24 +40,17 @@
                 <button class="button is-success">세트 저장하기</button>
                 <div class="overlay">
                   <div class="loading-container">
-                    <div class="header"> 
-                      <p class="header-text">1단계-본문 붙여넣기</p>
-                      <button class="header-button" onclick="clickTeacherMakeSet()"> x </button>
+                    <div class="header-container">
+                      <a class="header" onclick="clickTeacherMakeSet()"> x </a>
                     </div>
-                    <div class="bottom-container">
-                      <div class="left">
-                        <p class="first-p">단어를 추출할 본문의 텍스트를</p>
-                        <p class="second-p">복사<span class="bold">(Control-C)</span>하여 아래에 붙여 넣으세요.</p>           
-                      </div>
-                      <div class="right">
-                        <img src="../Frontweb/Images/../Images/extractword.png">
-                      </div>
-                    </div>
-                    <div class= "input-container">
-                        <input class="input-text" type="text" placeholder="본문 텍스트를 붙여 넣으세요 (Control V)">
+                    <div class="p-container">
+                      <p>모든 중복카드를 첫번째 카드만 남기고 일괄
+                        삭제할까요?
+                      </p>
                     </div>
                     <div class="button-container">
-                      <button>단어 추출하기</button>
+                      <button class= "left-button" onclick="clickTeacherMakeSet()">취소</button>
+                      <button class= "right-button" onclick="clickTeacherMakeSet()">일괄삭제</button>
                     </div>
                   </div>
                 </div>

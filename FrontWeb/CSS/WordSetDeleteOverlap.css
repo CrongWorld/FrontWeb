@@ -40,7 +40,7 @@
     justify-content: center;
   }
   .p-container p{
-    width: 85%;
+    width: 80%;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 18px;
     font-weight: 600;
@@ -83,5 +83,5 @@
   .button-container .right-button{
     background-color: #d9534f;
     color: white;
-    width: 143.275px;
+    /* width: 143.275px; */
   }
