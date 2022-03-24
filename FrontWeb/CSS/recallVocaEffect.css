@@ -1,8 +1,0 @@
-@keyframes wrongAnswer {
-  0%   {left:0px;}
-  20%  {left:10px;}
-  40%  {left:-10px;}
-  60%  {left:10px;}
-  80%  {left:-10px;}
-  100% {left:0px;}
-  }
