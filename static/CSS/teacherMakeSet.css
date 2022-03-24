@@ -175,6 +175,22 @@ input::placeholder{
     /* background-color: lightblue; */
 }
 
+.button-is-success{
+  color: #fff;
+  background-color: #7f5ac8;
+  border-color: #7f5ac8;
+  box-shadow: 0px 5px 5px rgb(0 0 0 16%) !important;
+  font-weight: 600;
+  width: 110px;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
 .gameList {
     width: 100vw;
     height: 55px;

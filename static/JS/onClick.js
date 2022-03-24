@@ -1,33 +1,33 @@
 function clickClasscard() { // 클래스카드 홈페이지로 이동
-  location.href = "http://127.0.0.1:8000";
+  location.href = "mainPage.html";
 }
 
 function clickMyClass() { // 나의 클래스로 이동
-  location.href = "http://127.0.0.1:8000/teacher/my-class";
+  location.href = "myClass.html";
 }
 
 function clickLogin() { // 로그인 화면으로 이동
-  location.href = "http://127.0.0.1:8000/login";
+  location.href = "login.html";
 }
 
 function clickSignup() { //회원가입 화면으로 이동
-  location.href = "http://127.0.0.1:8000/sign-up";
+  location.href = "sign-up.html";
 }
 
 function clickSignupTeacher(){
-  location.href = "http://127.0.0.1:8000/sign-up/teacher";
+  location.href = "teacherSignup.html";
 }
 
 function clickSignupStudent(){
-  location.href = "http://127.0.0.1:8000/sign-up/student";
+  location.href = "studentSignup.html";
 }
 
 function clickSignupStudentInfo(){
-  location.href = "http://127.0.0.1:8000/sign-up/student/info";
+  location.href = "studentSignup_2.html";
 }
 
 function clickSearchSet() { // 세트 검색으로 이동
-  location.href = "http://127.0.0.1:8000/page-elementary";
+  location.href = "setSearchPageElementary.html";
 }
 
 function clickGoogleLogin() { // 구글 로그인 화면으로 이동
@@ -39,11 +39,11 @@ function clickFacebookLogin() { // 페이스북 로그인 화면으로 이동
 }
 
 function clickMainPageStudent(){
-  location.href = "http://127.0.0.1:8000/student";
+  location.href = "signedupMainPage-student.html";
 }
 
 function clickMainPageTeacher() { // 로그인 시 선생님 메인페이지로 이동
-  location.href = "http://127.0.0.1:8000/teacher";
+  location.href = "signedUpMainPage-teacher.html";
 }
 
 // function clickMainPageStudent() { // 로그인 시 학생 메인페이지로 이동
@@ -51,35 +51,34 @@ function clickMainPageTeacher() { // 로그인 시 선생님 메인페이지로 
 // }
 
 function clickMyClassStudent() {
-  location.href = "http://127.0.0.1:8000/teacher/my-class/info/student";
+  location.href = "myClass-student.html";
 }
 
 function clickReport() {
-  location.href = "http://127.0.0.1:8000/teacher/my-class/info/report";
+  location.href = "classToReport.html";
 }
 
 function clickStudentVoca() {
-  location.href = "http://127.0.0.1:8000/teacher/my-class/0001";
+  location.href = "studentVocaMain.html";
 }
 function clickRememberVoca() {
-  location.href = "http://127.0.0.1:8000/teacher/my-class/0001/remember";
+  location.href = "rememberVoca.html";
 }
 
 function clickRecallVoca(){
-  location.href = "http://127.0.0.1:8000/teacher/my-class/0001/recall";
+  location.href = "recallVoca.html";
 }
 
 function clickMakeSet(){
-  // location.href = "http://127.0.0.1:8000/teacher/make-set";
-  if ($("div").hasClass("overlay") === true) {
-  $( 'div' ).remove( '.overlay' ) ;
+  if ($("div").hasClass("overlay")) {
+    $('div').remove( '.overlay' ) ;
   } else{
-    location.href= "http://127.0.0.1:8000/teacher/make-set";
+    location.href= "teacherMakeSet.html";
   }
 }
 
 function clickSetLoading(){
-  // location.href = "http://127.0.0.1:8000/teacher/make-set/loading";
+  // location.href = "teacher/make-set/loading";
   if ($("div").hasClass("overlay") === true) {
       $( 'div' ).remove( '.left' );
       $( 'div' ).remove( '.right' );
@@ -140,7 +139,7 @@ function clickSetLoading(){
 }
 
 function clickSetLeftLoading(){
-  // location.href = "http://127.0.0.1:8000/teacher/make-set/loading/left";
+  // location.href = "teacher/make-set/loading/left";
   $( 'div' ).remove( '.left' );
   $( 'div' ).remove( '.right' );
   $( 'div' ).remove( '.next-container' );
@@ -177,11 +176,11 @@ function clickSetLeftLoading(){
 }
 
 // function clickSetRightLoading(){
-//   location.href = "http://127.0.0.1:8000/teacher/make-set/loading/right";
+  // location.href = "teacher/make-set/loading/right";
 // }
 
 function clickSetExtract(){
-  // location.href = "http://127.0.0.1:8000/teacher/make-set/extract";
+  // location.href = "teacher/make-set/extract";
   console.log("gg");
   html ='';
   html+='<div class="overlay">'+
@@ -211,7 +210,7 @@ function clickSetExtract(){
 }
 
 function clickSetAlign(){
-  // location.href = "http://127.0.0.1:8000/teacher/make-set/align";
+  // location.href = "teacher/make-set/align";
   html ='';
   html+='<div class="overlay">'+
     '<div class="align-container">'+
@@ -241,7 +240,7 @@ function clickSetAlign(){
 }
 
 function clickSetOverlap(){
-  // location.href = "http://127.0.0.1:8000/teacher/make-set/overlap";
+  // location.href = "teacher/make-set/overlap";
   html ='';
   html+='<div class="overlay">'+
     '<div class="overlap-container">'+
@@ -263,7 +262,7 @@ function clickSetOverlap(){
 }
 
 function clickSetDeleteOverlap(){
-  // location.href = "http://127.0.0.1:8000/teacher/make-set/overlap/delete";
+  // location.href = "teacher/make-set/overlap/delete";
   $( 'div' ).remove( '.overlap-container' );
   html ='';
   html += '<div class="d-overlap-container">'+
@@ -285,7 +284,7 @@ function clickSetDeleteOverlap(){
 }
 
 function clickSetSetting(){
-  // location.href = "http://127.0.0.1:8000/teacher/make-set/setting";
+  // location.href = "teacher/make-set/setting";
   if ($("div").hasClass("overlay") === true){
     $( 'div' ).remove( '.alert-overlay' );
   } else{ html ='';
@@ -332,7 +331,7 @@ function clickSetSetting(){
 }
 
 function clickSetOpenAlert(){
-  // location.href = "http://127.0.0.1:8000/teacher/make-set/setting/alert";
+  // location.href = "teacher/make-set/setting/alert";
   html='';
   html+='<div class="alert-overlay">'+
 
