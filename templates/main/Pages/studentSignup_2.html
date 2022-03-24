@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="window">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA_Compatible" content="IE=edge">
+  <meta name="viewport" content="width= device-width">
+  <meta http-equiv="ontent-Security-Policy" content="upgrade-insecure-requests">
+  <meta name='google' value='notranslate'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+  <!--github Pages를 위한 href변경-->
+  <link rel="stylesheet" href="/static/CSS/teacherSignup.css">
+
+  <link rel="stylesheet" href="/CSS/teacherSignup.css">
+</head>
+
+<title>SELS STUDY | 영어쌤 1/3이 선택한 스마트 단어장</title>
+<!-- 학생 회원가입 전체 div -->
+<body>
+  <div class="teacherSignup">
+    <img src="/static/Images/teacher_signup.png" style="width: 50vw; height: 90vh;">
+
+    <div class="teacherSignup" style="flex-direction: column;">
+      <div class="classcardLogo">
+        <p>SELS</p>
+        <p style="color: rgb(47, 255, 57);">STUDY</p>
+      </div>
+
+      <!-- 학생 정보 입력 -->
+      <div class="teacherSignup" style="flex-direction: column;">
+        <input type="text" placeholder="아이디(영문 소문자, 숫자 5-20자)" class="eachInputBox" id="inputUserId">
+        <input type="text" placeholder="이름 (가입 후 변경제한)" class="eachInputBox" id="inputUserName">
+
+        <div class="teacherSignup" style="margin: 0vw;">
+          <input type="text" placeholder="비밀번호" class="eachInputBox" style="width: 11.7vw;" id="inputUserPw">
+          <input type="text" placeholder="비밀번호 확인" class="eachInputBox" style="width: 11.7vw; " id="inputUserPw2">
+        </div>
+
+        <P id="text">비번찾기용 연락처를 1개 입력하세요.</P>
+        <input type="text" placeholder="이메일 주소" class="eachInputBox" id="inputUserEmail">
+        <input type="text" placeholder="휴대 전화번호" class="eachInputBox" id="inputUserPhone">
+        <!-- 약관 동의 -->
+        <label><input type="checkbox" name="id" value="remember" id="agreeInfo" onclick="allAgreeClicked()">전체 동의</label>
+        <hr id="line" style="margin: 0.7vw;">
+        <label><input type="checkbox" id="serviceAgreement" value="remember" class="agreeInfo">서비스 이용약관 (필수)</label>
+        <label><input type="checkbox" id="personalAgreement" value="remember" class="agreeInfo">개인정보 처리방침 (필수)</label>
+        <label><input type="checkbox" id="ageAgreement" value="remember" class="agreeInfo">만 14세 이상 (선택)</label>
+        <label><input type="checkbox" id="marketingAgreement" value="remember" class="agreeInfo">마케팅 정보 수신 동의 (선택)</label>
+
+        <button class="button is-primary" id="teacherButton" onclick="signupBtnClicked()">SELS STUDY 회원가입</button>
+
+      </div>
+    </div>
+  </div>
+  <!--github Pages를 위한 href변경-->
+  <script type="text/javascript" src="/static/JS/onClick.js"></script>
+  <script type="text/javascript" src="/static/JS/input.js"></script>
+
+</body>
+
+</html>

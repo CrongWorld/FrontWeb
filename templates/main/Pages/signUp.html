@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="window">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA_Compatible" content="IE=edge">
+  <meta name="viewport" content="width= device-width">
+  <meta http-equiv="ontent-Security-Policy" content="upgrade-insecure-requests">
+  <meta name='google' value='notranslate'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+  <!--github pages를 위한 href location 변경-->
+  <link rel="stylesheet" href="/static/CSS/signUp.css">
+
+  <link rel="stylesheet" href="/CSS/signUp.css">
+</head>
+
+<title>SELS STUDY | 영어쌤 1/3이 선택한 스마트 단어장</title>
+<!-- 전체 div -->
+<div class="signUpAll">
+  <img src="/static/Images/signUp.png" style="width: 70vw; height: 45vw;">
+  <!-- 학생/선생님 선택 div -->
+  <div class="signUpAll" style="flex-direction: column;">
+    <div class="classcardText">
+      <h1 class="textSize">SELS <h1 style="color: rgb(47, 255, 57);" class="textSize"> STUDY</h1>
+      </h1>
+    </div>
+    <!-- 선생님/학생 선택 버튼 -->
+    <div class="signupButton">
+      <button class="button is-primary" style="margin: 1vh;"
+        onclick="clickSignupTeacher()">선생님으로 가입</button>
+      <button class="button is-link" style="margin: 1vh;" onclick="clickSignupStudent()">학생으로
+        가입</button>
+    </div>
+    <!-- 회원가입 링크 -->
+    <div class="signUpAll">
+      <p>이미 계정이 있으면, </p>
+      <a href="/Pages/login.html"> 로그인</a>
+    </div>
+  </div>
+</div>
+
+</html>
+
+<script type="text/javascript" src="/static/JS/onClick.js"></script>

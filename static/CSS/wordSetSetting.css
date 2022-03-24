@@ -1,0 +1,116 @@
+.loading-container{
+    width: 448px;
+    height: 350px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+  }
+  .overlay{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header{
+    background-color: #78d024;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    height: 80px;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+  }
+
+  .header-text{
+    padding-left: 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: "Open Sans",
+    "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  }
+
+  .header-button{
+    background-color: #78d024;
+    color: white;
+    border:none;
+    padding-right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+
+  }
+  .setting-container{
+    width: 100%;
+    height: 234.96px;
+    padding: 32px;
+  }
+
+  .setting-container input{
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+
+  .setting-container .first-line,
+  .setting-container .second-line{
+    font-weight: bold;
+  }
+
+  .setting-container .first-line-span{
+    font-size: 13px;
+    font-weight: normal;
+  }
+
+  .setting-container .color{
+    color: #7F5AC8;
+  }
+
+  .setting-container p{
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 14px;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  .open,
+  .close,
+  .allow,
+  .forbid{
+    display: flex;
+    align-items: center;
+  }
+
+  .button-container{
+    width: 100%;
+    border-top: 1px solid #d8d8d8;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+  }
+  .button-container button{
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+    background-color: #78d024;
+    border: none;
+    border-radius: 5px;
+    height: 46px;
+    width: 100px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+  }

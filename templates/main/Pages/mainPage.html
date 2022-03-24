@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr" class="window">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA_Compatible" content="IE=edge">
+    <meta name="viewport" content="width= device-width">
+    <meta http-equiv="ontent-Security-Policy" content="upgrade-insecure-requests">
+    <meta name='google' value='notranslate'>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.js"></script> 
+    <!--django를 위한 상대경로-->
+    <script type="text/javascript" src="/static/JS/onClick.js"></script>
+    <script type="text/javascript" src="/static/JS/myClass.js"></script>
+    <link rel="stylesheet" href="{% static 'CSS/mainPage.css' %}">
+
+{#    <link rel="stylesheet" href="/CSS/mainPage.css">#}
+{#    <script type="text/javascript" src="/JS/onClick.js"></script>#}
+{#    <script type="text/javascript" src="/JS/myClass.js"></script>#}
+
+    <title>SELS STUDY | 영어쌤 1/3이 선택한 스마트 단어장</title>
+  </head>
+  <body>
+    <div class="titleShadowBox"></div>
+      <div class="titleContents">
+        <div class="title-mainImgContents">
+              <div style="display : flex;" onclick="clickClasscard()">
+                    <p id="mainLeftTopImg" >SELS STUDY</P>
+                  </a>
+              </div>
+          </a>
+        </div>
+        <div class="title-mainContents">
+          <div id="searchSet">
+            <img src="/static/Images/serchSet.png" onclick="clickSearchSet()">
+          </div>
+          <div id="makeSet" onclick="clickMakeSet()">
+            <img src="/static/Images/makeSet.png">
+          </div>
+        </div>
+        <div class="title-loginContents">
+          <button class="button is-rounded" id="loginBtn" style="border-color: rgba(117,75,190); color: rgba(117,75,190); width: 120px;" onclick="clickLogin()">로그인</button>
+          <button class="button is-info is-rounded" style="background-color: rgba(117,75,190); width: 120px; margin-left: 5%;" onclick="clickSignup()">회원가입</button>
+        </div>
+      </div>
+    </div>
+    <div class="mainContents">
+
+      <div class="main-leftConsole">
+        <div class="leftConsoleDiv">
+          <div id="leftDivisions">
+            <div style="float: left;">나의 클래스</div>
+            <div style="float:right;margin-left: 10px;">
+              <div class="classesRight" id="classesPlus" style="float: left; padding-right: 10px;">➕</div>
+              <div class="classesRight" id="classesSetting" style="float: left; padding-right: 10px;">⚙️</div>
+              <div class="classesRight" id="classesEye" style="float: left; padding-right: 10px;">👁️‍🗨️</div>
+            </div>
+          </div>
+          <div id="getClasses">
+        
+          </div>
+        </div>
+        <div class="leftConsoleDiv">
+          <div id="leftDivisions">
+            <div style="float: left;">나의 폴더</div>
+            <div class="classesRight" id="classesPlus" style="float: right; padding-right: 10px;">➕</div>
+          </div>
+          <div id="leftDivisions">📁 이용한 세트</div>
+          <div id="leftDivisions">📁 만든 세트</div>
+          <div id="leftDivisions">📁 구독중인 폴더</div>
+          
+
+        </div>
+      </div>
+      <div class="main-rightDashBoard"
+           style="
+           background-image: url('/static/Images/mainDemo.png');
+           background-repeat: no-repeat;
+           background-size: contain;">
+      </div>
+    </div>
+  </body>
+</html>
