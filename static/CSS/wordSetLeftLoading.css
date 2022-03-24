@@ -1,0 +1,133 @@
+
+.loading-container{
+    width: 706.8px;
+    height: 480px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .overlay{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header{
+    background-color: #78d024;
+    width: 100%;
+    height: 60px;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+  }
+  .header-text{
+    padding-left: 30px;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: "Open Sans",
+    "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  }
+  .header-button{
+    background-color: #78d024;
+    color: white;
+    border:none;
+    padding-right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  .bottom-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+    padding-top: 30px;
+  }
+
+  .bottom-container p{
+    font-family: "Helvetica Neue",
+    Helvetica,Arial,sans-serif;
+    line-height: 1.42857143;
+    color: #333;
+  }
+
+  .left{
+    width: 45%;
+    height: 106.525px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left p{
+      font-size: 14px;
+      width: 100%;
+      height: 40px;
+    }
+
+  .left .first-p{
+    margin-bottom: 20px;
+  }
+  .left .red{
+      color: red;
+  }
+
+  .right{
+    width: 45%;
+    height: 106.525px;
+    display: flex;
+    align-items: center;
+  }
+  .right img{
+    width: 100%;
+  }
+  .input-container{
+      width: 100%;
+      height: 35%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+
+  }
+  .input-text{
+      padding: 6px 12px;
+      width: 90%;
+      height: 100%;
+      border: 1px solid #ccc;
+  }
+
+  .input-text:focus{
+      outline: none;
+  }
+
+
+  .prev-container{
+    width: 100%;
+    border-top: 1px solid #d8d8d8;
+    bottom: 0px;
+    padding-bottom: 0;
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+  }
+  .prev{
+    width: 90%;
+    text-align: left;
+    text-decoration: none;
+    color: rgb(127, 90, 200);
+  }
+  @media (min-width: 930px){
+    .loading-container{
+      width: 898px;
+    }
+  }
