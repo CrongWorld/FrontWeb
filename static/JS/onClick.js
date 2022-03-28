@@ -87,7 +87,7 @@ function clickSetLoading(){
       $(".bottom-container").css("justify-content","space-evenly");
       $(".bottom-container").css("height","70%");
       html ='';
-      html +=   '<div id="loading" class="left" >'+
+      html +=   '<div id="loading" class="left" onclick="leftUpload()">'+
           '<p class="first-p">단어, 의미, 예문이 분리된 엑셀/한글 데이터</p>'+
           '<p class="second-p">의미와 예문은 없어도 됩니다.</p>'+
           '<img class="left-img" src="/static/Images/word_excel_img.png">'+
@@ -116,8 +116,12 @@ function clickSetLoading(){
       html +=   '<p class="header-text">엑셀, 한글자료 가져오기</p>';
       html +=    '<button class="header-button" onclick="clickMakeSet()"> x </button>';
       html +=   '</div>';
-      html +=  '<div id=loading class="bottom-container">'
-      html +=   '<div id="loading" class="left" >'+
+      html +=  '<div id=loading class="bottom-container">';
+      html += '<form name="signform" method="POST" ENCTYPE="multipart/form-data" action="./design_update.htm">';
+      html += '<input type="file" id="file" name="file" style="display:none;" onchange="changeValue(this)">';
+      // html += '<input type="hidden" name = "target_url">';
+      html += '</form>';
+      html +=   '<div id="loading" class="left" onclick="leftUpload()">'+
           '<p class="first-p">단어, 의미, 예문이 분리된 엑셀/한글 데이터</p>'+
           '<p class="second-p">의미와 예문은 없어도 됩니다.</p>'+
           '<img class="left-img" src="/static/Images/word_excel_img.png">'+
@@ -137,6 +141,20 @@ function clickSetLoading(){
       $(".title-loginContents").append(html);}
 
 }
+
+
+function leftUpload(){
+  $('#file').click();
+}
+function changeValue(obj){
+  document.signform.submit();
+  alert(document.getElementById('file').value);
+// 출처: https://bravochoi.tistory.com/94 [즐거운인생] (파일 경로 alert)
+// 출처: https://doolyit.tistory.com/204 (이미지 클릭하여 파일 업로드)
+// 참고 https://kwonyang.tistory.com/9 (back-end 연동)
+
+}
+
 
 function clickSetLeftLoading(){
   // location.href = "teacher/make-set/loading/left";
