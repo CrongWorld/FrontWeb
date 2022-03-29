@@ -70,7 +70,94 @@ function clickRecallVoca(){
 }
 
 function clickMakeSet(){
-  if ($("div").hasClass("overlay")) {
+  html ="";
+  html+='<div class="overlay">'+
+        '<div class="up-body">'+
+          '<div class="header">'+
+            '<a class="x" onclick="closeMakeSet()">X</a>'+
+          '</div>'+
+          '<div class="body-container">'+
+            '<div class="first-line">'+
+              '<div class="word-set" onclick="clickWordSet()">'+
+                '<div class="font-14">영어 등 외국어의 어휘를 효과적으로 암기'+
+                  '<span class="font-24">단어 세트</span>'+
+                '</div>'+
+              '</div>'+
+              '<div class="sentence-set">'+
+                '<div class="font-14">교과서, 원서의<br> 영어 문장을 빠르게 암기'+
+                  '<span class="font-24">문장 세트</span>'+
+                '</div>'+
+              '</div>'+
+              '<div class="drill-set">'+
+                '<div class="font-14">내신 어법 문제를<br> 빠르게 출제하고 자동채점'+
+                  '<span class="font-24">드릴 세트</span>'+
+                '</div>'+
+              '</div>'+
+              '<div class="listening-set">'+
+                '<div class="font-14">듣기 시험을 실시하고<br> 오답만 다시 풀기'+
+                  '<span class="font-24">듣기 세트</span>'+
+                '</div>'+
+              '</div>'+
+          '</div>'+
+            '<div class="second-line">'+
+              '<div class="term-set">'+
+                '<div class="font-14">사회, 과학 등의<br> 용어와 개념을 암기'+
+                  '<span class="font-24">용어 세트</span>'+
+                '</div>'+
+              '</div>'+
+              '<div class="answer-set">'+
+                '<div class="font-14">종이책, 시험지 문제를<br> 자동채점(OMR)'+
+                  '<span class="font-24">정답 세트</span>'+
+                '</div>'+
+              '</div>'+
+              '<div class="text-danger">'+
+                '저작권 등 다른 사람의 권리를 침해하거나 명예를 훼손하면 관련 법률에 저촉되니 주의해 주세요.'+
+                '능률보카, 워드마스터, 뜯어먹는 영단어, 경선식 영단어, 우선순위 영단어, 어휘끝, 마더텅 등 판매되는 교재의 내용을 제작하실 경우 비공개로 설정하여 이용하세요'+
+              '</div>'+
+            '</div>'+
+          '</div>'+
+        '</div>'+
+        '<div class="bottom-body">'+
+          '<div class="font-16">신규 공식제공 세트 소개</div>'+
+          '<div class="new-publish-box">'+
+            '<img src="/static/Images/Sample1.jpg">'+
+            '<img src="/static/Images/Sample1.jpg">'+
+            '<img src="/static/Images/Sample1.jpg">'+
+            '<img src="/static/Images/Sample1.jpg">'+
+            '<img src="/static/Images/Sample1.jpg">'+
+            '<div class="w-200 text-center font-18 font-bold">'+
+              '공식 제공학습 세트<br>'+
+              '<div class="font-16 font-bold .m-t-sm">26,752개</div>'+
+            '</div>'+
+          '</div>'+
+        '</div>'+
+      '</div>';
+      let locationList = location.href.split('/');
+      let pageName = locationList[locationList.length-1];
+      switch(pageName){
+        case('signedUpMainPage-teacher.html'):
+        $('.userLoginInfo').after(html);
+        break;        
+        case('setSearchPageElementary.html'):
+        $('.bookBoxTable').after(html);
+        break;
+        case('myClass.html'):
+        $('.main-topInfo').after(html);
+        break;
+        case('signedupMainPage-student.html'):
+        $('.userLoginInfo').after(html);
+        break;
+      }
+}
+
+function closeMakeSet(){
+  $('div').remove('.overlay');
+}
+
+function clickWordSet(){
+  let locationList = location.href.split('/');
+  let pageName = locationList[locationList.length-1];
+  if (pageName === 'teacherMakeSet.html') {
     $('div').remove( '.overlay' ) ;
   } else{
     location.href= "teacherMakeSet.html";
@@ -87,6 +174,9 @@ function clickSetLoading(){
       $(".bottom-container").css("justify-content","space-evenly");
       $(".bottom-container").css("height","70%");
       html ='';
+      html += '<form name="signform" method="POST" ENCTYPE="multipart/form-data" action="./design_update.htm">';
+      html += '<input type="file" id="file" name="file" style="display:none;" onchange="changeValue(this)">';
+      html += '</form>';
       html +=   '<div id="loading" class="left" onclick="leftUpload()">'+
           '<p class="first-p">단어, 의미, 예문이 분리된 엑셀/한글 데이터</p>'+
           '<p class="second-p">의미와 예문은 없어도 됩니다.</p>'+
@@ -114,12 +204,11 @@ function clickSetLoading(){
       html += '<div class="loading-container">';
       html +=  '<div id=loading class="header">';
       html +=   '<p class="header-text">엑셀, 한글자료 가져오기</p>';
-      html +=    '<button class="header-button" onclick="clickMakeSet()"> x </button>';
+      html +=    '<button class="header-button" onclick="clickWordSet()"> x </button>';
       html +=   '</div>';
       html +=  '<div id=loading class="bottom-container">';
       html += '<form name="signform" method="POST" ENCTYPE="multipart/form-data" action="./design_update.htm">';
       html += '<input type="file" id="file" name="file" style="display:none;" onchange="changeValue(this)">';
-      // html += '<input type="hidden" name = "target_url">';
       html += '</form>';
       html +=   '<div id="loading" class="left" onclick="leftUpload()">'+
           '<p class="first-p">단어, 의미, 예문이 분리된 엑셀/한글 데이터</p>'+
@@ -205,7 +294,7 @@ function clickSetExtract(){
       '<div class="extract-container">'+
         '<div id=extract class="header">'+
           '<p class="header-text">1단계-본문 붙여넣기</p>'+
-            '<button class="header-button" onClick="clickMakeSet()"> x</button>'+
+            '<button class="header-button" onClick="clickWordSet()"> x</button>'+
         '</div>'+
         '<div id=extract class="bottom-container">'+
           '<div id=extract class="left">'+
@@ -234,7 +323,7 @@ function clickSetAlign(){
     '<div class="align-container">'+
       '<div id=align class="header">'+
         '<p class="header-text">카드 정렬</p>'+
-        '<button class="header-button" onClick="clickMakeSet()"> x</button>'+
+        '<button class="header-button" onClick="clickWordSet()"> x</button>'+
       '</div>'+
 
       '<div class="shuffle">'+
@@ -250,7 +339,7 @@ function clickSetAlign(){
           '<p class="cap">대소문자 구분</p>'+
       '</div>'+
       '<div id=align class="button-container">'+
-        '<button onClick="clickMakeSet()">확인</button>'+
+        '<button onClick="clickWordSet()">확인</button>'+
       '</div>'+
     '</div>'+
   '</div>';
@@ -263,7 +352,7 @@ function clickSetOverlap(){
   html+='<div class="overlay">'+
     '<div class="overlap-container">'+
       '<div id=overlap class="header-container">'+
-        '<a class="header" onClick="clickMakeSet()"> x </a>'+
+        '<a class="header" onClick="clickWordSet()"> x </a>'+
       '</div>'+
       '<div id=overlap class="p-container">'+
         '<p>중복 단어가 있습니다. 중복 단어는 학습에'+
@@ -271,7 +360,7 @@ function clickSetOverlap(){
         '</p>'+
       '</div>'+
       '<div id=overlap class="button-container">'+
-        '<button class="left-button" onClick="clickMakeSet()">수정</button>'+
+        '<button class="left-button" onClick="clickWordSet()">수정</button>'+
         '<button class="right-button" onClick="clickSetDeleteOverlap()">모든 중복카드 제거</button>'+
       '</div>'+
     '</div>'+
@@ -285,7 +374,7 @@ function clickSetDeleteOverlap(){
   html ='';
   html += '<div class="d-overlap-container">'+
       '<div id=d-overlap class="header-container">'+
-                      '<a class="header" onclick="clickMakeSet()"> x </a>'+
+                      '<a class="header" onclick="clickWordSet()"> x </a>'+
                     '</div>'+
                     '<div id=d-overlap class="p-container">'+
                       '<p>모든 중복카드를 첫번째 카드만 남기고 일괄'+
@@ -293,8 +382,8 @@ function clickSetDeleteOverlap(){
                       '</p>'+
                     '</div>'+
                     '<div id=d-overlap class="button-container">'+
-                      '<button class= "left-button" onclick="clickMakeSet()">취소</button>'+
-                      '<button class= "right-button" onclick="clickMakeSet()">일괄삭제</button>'+
+                      '<button class= "left-button" onclick="clickWordSet()">취소</button>'+
+                      '<button class= "right-button" onclick="clickWordSet()">일괄삭제</button>'+
                     '</div>'+
                   '</div>'+
                 '</div>';
@@ -310,7 +399,7 @@ function clickSetSetting(){
     '<div class="setting-container">'+
       '<div id=setting class="header">'+
         '<p class="header-text">세트 권한 설정</p>'+
-        '<button class="header-button" onClick="clickMakeSet()"> x</button>'+
+        '<button class="header-button" onClick="clickWordSet()"> x</button>'+
       '</div>'+
 
       '<div id=setting class="bottom-container">'+
@@ -340,7 +429,7 @@ function clickSetSetting(){
 
       '</div>'+
       '<div id=setting class="button-container">'+
-        '<button onClick="clickMakeSet()">확인</button>'+
+        '<button onClick="clickWordSet()">확인</button>'+
       '</div>'+
     '</div>'+
   '</div>';

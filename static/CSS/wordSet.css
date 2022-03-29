@@ -1,0 +1,168 @@
+.overlay{
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.up-body,
+.bottom-body{
+  background-color: white;
+  width: 920px;
+  position: relative;
+  border-radius: 5px;
+}
+.up-body{
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  height: 403px;
+  
+}
+.bottom-body{
+  height: 283px;
+}
+.up-body .header{
+  width: 100%;
+  height: 10%;
+  display:flex;
+  justify-content: end;
+}
+.up-body .header .x{
+  color: black;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-right: 15px;
+  
+}
+.up-body .body-container{
+  width: 854px;
+  height: 296px;
+
+}
+
+.up-body .first-line{
+  display: flex;
+  justify-content: space-evenly;
+}
+.up-body .second-line{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+
+.word-set,
+.sentence-set,
+.listening-set,
+.drill-set,
+.term-set,
+.answer-set{
+  width: 200px;
+  height: 134px;
+  border-radius: 8px;
+  cursor: pointer;
+  align-items:center;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  color: white;
+}
+
+.word-set{
+  background-color:#78d024;
+}
+.sentence-set{
+  background-color:#ffca28;
+}
+.drill-set{
+  background-color:#7898FD;
+}
+.listening-set{
+  background-color:#7f5ac8;
+}
+.term-set{
+  background-color:#E9B7EF;
+}
+.answer-set{
+  background-color:#E07141;
+}
+
+.up-body .second-line .text-danger{
+  width: 416px;
+  height: 134px;
+  padding: 10px 20px;
+  border: 1px dashed;
+  line-height: 1.8;
+  vertical-align: middle;
+  text-align: left;
+  font-weight: 600;
+  font-size: 12px;
+  color: #C9484D;
+  box-sizing: border-box;
+}
+
+.bottom-body{
+  padding: 32px;
+}
+
+.new-publish-box{
+
+  height: 160px;
+  display: flex;
+  align-items: center;
+}
+.new-publish-box img{
+  width: 120px;
+  height: 150px;
+  margin-right: 26px;
+  padding-top: 20px;
+}
+
+.up-body .font-14{
+  width: 184px;
+  height: 114px;
+  text-align:center; 
+}
+
+
+.up-body .font-24{
+  display: block;
+  margin-top: 20px;
+}
+
+.font-14{
+  font-size: 14px;
+}
+.font-16{
+  font-size: 16px;
+}
+.font-18{
+  font-size: 18px;
+}
+.font-24{
+  font-size: 24px;
+}
+.w-200{
+  width: 200px;
+}
+.font-bold{
+  font-weight: 600;
+}
+.text-center{
+  text-align: center;
+}
+.m-t-sm{
+  margin-top: 10px;
+}
+
+.bottom-body .w-200{
+  padding-left:8px;
+  font-size: 18px;
+}
