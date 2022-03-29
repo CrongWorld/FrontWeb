@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="window" style="background-color: rgb(83, 83, 83);">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA_Compatible" content="IE=edge">
+  <meta name="viewport" content="width= device-width">
+  <meta http-equiv="ontent-Security-Policy" content="upgrade-insecure-requests">
+  <meta name='google' value='notranslate'>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/static/CSS/studentVocaMain.css">
+  <link rel="stylesheet" href="/static/CSS/recallVoca.css">
+  <link rel="stylesheet" href="/static/CSS/spellVoca.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- <script type="text/javascript" src="/static/JS/recallVoca.js"></script> -->
+  <title>SELS STUDY | 영어쌤 1/3이 선택한 스마트 단어장</title>
+
+  <style>
+
+  </style>
+</head>
+  
+<body>
+  <!-- 암기학습 상단바 -->
+  <div class="rememberMenuBar">
+    <button id="menuButton" style="margin: 0px 110px 0px 10px">학습진도 저장</button>
+    <p style="color: white;">단어제시</p>
+    <div>
+      <button id="menuButton">암기학습법안내</button>
+      <button id="menuButton">학습설정</button>
+      <button id="menuButton">줄세개</button>
+    </div>
+  </div>
+  <div class="wrapper-learn">
+    <div class="cc-table">
+      <div class="study-top">
+        <span class="text-success">
+          <span class="known_count">1</span>
+        </span>
+        <span class="text-gray">|
+          <span class="total-count">
+        
+          </span>
+        </span>
+      </div>
+      <div class="card-top">
+        <div class="text-normal spell-answer">
+          <!-- [형] 최근 생겨난 -->
+        </div>
+      </div>
+      <div class="card-bottom">
+        <div>
+          <input class="form-control" type="text" placeholder="정답은 줄바꿈 없이 1줄로 입력하세요." autocomplete="off">
+          <a class="btn-show-hint">
+            힌트보기
+          </a>
+      </div>
+      </div>
+      <div class="study-bottom">
+        <div class="normal-btns">
+          <div class="btn-text btn-down-cover-box">
+            <a class="btn btn-x1 btn-primary shadow mw-250 btn-confirm">
+              확인
+            </a>
+            <div>ENTER</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+  </div>
+<script src="/static/JS/rememberVocaJquery.js"></script>
+<script>
+  let koreanMean = sampleVoca.voca[0].koreanMean;
+  let englishVoca = sampleVoca.voca[0].englishVoca
+  $('.card-top .text-normal').append(koreanMean);
+  $('.form-control').on("keyup", function (e) {
+      if (e.keyCode == 13) { // keyCode 13 = enter key
+        if ($('.form-control').val() == englishVoca) {
+          alert("correct");
+        } else {
+          alert("false");
+        }
+      }
+    });
+
+  let totalCount = sampleVoca.voca.length;
+  $('.total-count').append(totalCount);
+
+</script>
+  <!-- <link rel="stylesheet" href="/static/CSS/recallVocaEffect.css"> -->
+</body>
+
+</html>
