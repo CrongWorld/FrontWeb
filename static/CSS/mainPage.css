@@ -11,7 +11,7 @@
   }
 
   .profilePic {
-    background-image: url('/Images/default_photo.png');
+    background-image: url('../../static/Images/default_photo.png');
   }
   
 .mainContents{
