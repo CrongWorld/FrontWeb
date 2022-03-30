@@ -11,7 +11,7 @@ function clickLogin() { // 로그인 화면으로 이동
 }
 
 function clickSignup() { //회원가입 화면으로 이동
-  location.href = "sign-up.html";
+  location.href = "signUp.html";
 }
 
 function clickSignupTeacher(){
