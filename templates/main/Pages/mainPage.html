@@ -14,14 +14,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-latest.js"></script> 
-    <!--django를 위한 상대경로-->
-    <script type="text/javascript" src="/static/JS/onClick.js"></script>
-    <script type="text/javascript" src="/static/JS/myClass.js"></script>
-    <link rel="stylesheet" href="{% static 'CSS/mainPage.css' %}">
 
-    <link rel="stylesheet" href="/static/CSS/mainPage.css">
-    <script type="text/javascript" src="/JS/onClick.js"></script>
-    <script type="text/javascript" src="/JS/myClass.js"></script>
+    <link rel="stylesheet" href="../../../static/CSS/mainPage.css">
+    <script type="text/javascript" src="../../../static/JS/onClick.js"></script>
+    <script type="text/javascript" src="../../../static/JS/myClass.js"></script>
 
     <title>SELS STUDY | 영어쌤 1/3이 선택한 스마트 단어장</title>
   </head>
@@ -37,10 +33,10 @@
         </div>
         <div class="title-mainContents">
           <div id="searchSet">
-            <img src="/static/Images/serchSet.png" onclick="clickSearchSet()">
+            <img src="../../../static/Images/serchSet.png" onclick="clickSearchSet()">
           </div>
           <div id="makeSet" onclick="clickMakeSet()">
-            <img src="/static/Images/makeSet.png">
+            <img src="../../../static/Images/makeSet.png">
           </div>
         </div>
         <div class="title-loginContents">
@@ -79,7 +75,7 @@
       </div>
       <div class="main-rightDashBoard"
            style="
-           background-image: url('/static/Images/mainDemo.png');
+           background-image: url('../../../static/Images/mainDemo.png');
            background-repeat: no-repeat;
            background-size: contain;">
       </div>
