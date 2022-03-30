@@ -124,11 +124,11 @@ function clickMakeSet(){
         '<div class="bottom-body">'+
           '<div class="font-16">신규 공식제공 세트 소개</div>'+
           '<div class="new-publish-box">'+
-            '<img src="/static/Images/Sample1.jpg">'+
-            '<img src="/static/Images/Sample1.jpg">'+
-            '<img src="/static/Images/Sample1.jpg">'+
-            '<img src="/static/Images/Sample1.jpg">'+
-            '<img src="/static/Images/Sample1.jpg">'+
+            '<img src="../../../static/Images/Sample1.jpg">'+
+            '<img src="../../../static/Images/Sample1.jpg">'+
+            '<img src="../../../static/Images/Sample1.jpg">'+
+            '<img src="../../../static/Images/Sample1.jpg">'+
+            '<img src="../../../static/Images/Sample1.jpg">'+
             '<div class="w-200 text-center font-18 font-bold">'+
               '공식 제공학습 세트<br>'+
               '<div class="font-16 font-bold .m-t-sm">26,752개</div>'+
@@ -184,11 +184,11 @@ function clickSetLoading(){
       html +=   '<div id="loading" class="left" onclick="leftUpload()">'+
           '<p class="first-p">단어, 의미, 예문이 분리된 엑셀/한글 데이터</p>'+
           '<p class="second-p">의미와 예문은 없어도 됩니다.</p>'+
-          '<img class="left-img" src="/static/Images/word_excel_img.png">'+
+          '<img class="left-img" src="../../../static/Images/word_excel_img.png">'+
           ' </div>'+
           '<div id="loading" class="right">'+
           '<p>단어, 의미가 연결된 텍스트 데이터</p>'+
-          '<img class="right-img" src="/static/Images/word_text_img.png">'+
+          '<img class="right-img" src="../../../static/Images/word_text_img.png">'+
           '</div>'+
           '</div>';
       $(".bottom-container").append(html);
@@ -217,11 +217,11 @@ function clickSetLoading(){
       html +=   '<div id="loading" class="left" onclick="leftUpload()">'+
           '<p class="first-p">단어, 의미, 예문이 분리된 엑셀/한글 데이터</p>'+
           '<p class="second-p">의미와 예문은 없어도 됩니다.</p>'+
-          '<img class="left-img" src="/static/Images/word_excel_img.png">'+
+          '<img class="left-img" src="../../../static/Images/word_excel_img.png">'+
           ' </div>'+
           '<div id="loading" class="right">'+
           '<p>단어, 의미가 연결된 텍스트 데이터</p>'+
-          '<img class="right-img" src="/static/Images/word_text_img.png">'+
+          '<img class="right-img" src="../../../static/Images/word_text_img.png">'+
           '</div>'+
           '</div>'+
           '<div class="next-container">'+
@@ -262,7 +262,7 @@ function clickSetLeftLoading(){
     '<p class="second-p">! 의미와 예문은 없어도 됩니다.</p>'+
   '</div>'+
   '<div id="left-loading" class="right" >'+
-    '<img src="/static/Images/word_excel_img.png">'+
+    '<img src="../../../static/Images/word_excel_img.png">'+
   '</div>';
 
   $(".bottom-container").css("justify-content","center");
@@ -306,7 +306,7 @@ function clickSetExtract(){
             '<p class="second-p">복사<span class="bold">(Control-C)</span>하여 아래에 붙여 넣으세요.</p>'+
           '</div>'+
           '<div id=extract class="right">'+
-            '<img src="/static/Images/../Images/extractword.png">'+
+            '<img src="../../../static/Images/../Images/extractword.png">'+
           '</div>'+
       '</div>'+
         '<div id=extract class="input-container">'+
