@@ -39,7 +39,7 @@ function clickFacebookLogin() { // 페이스북 로그인 화면으로 이동
 }
 
 function clickMainPageStudent(){
-  location.href = "signedupMainPage-student.html";
+  location.href = "signedUpMainPage-student.html";
 }
 
 function clickMainPageTeacher() { // 로그인 시 선생님 메인페이지로 이동
