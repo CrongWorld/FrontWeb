@@ -69,6 +69,10 @@ function clickRecallVoca(){
   location.href = "recallVoca.html";
 }
 
+function clickSpellVoca(){
+  location.href = "spellVoca.html"
+}
+
 function clickMakeSet(){
   html ="";
   html+='<div class="overlay">'+
@@ -463,3 +467,4 @@ function clickSetOpenAlert(){
   '</div>';
     $("#setting.bottom-container").append(html);
 }
+
