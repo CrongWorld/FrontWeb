@@ -106,5 +106,5 @@ const sampleSetInfo=
 
 for(idx in sampleSetInfo.setInfo)
 {
-    $(".setUnorderedList").append("<li onclick=\"clickStudentVoca()\" class = \"setNameList\"><div id=\"vocaType\"><img src=\"/static/Images/classCardVoca.png\" alt=\"단어\"></div>" + sampleSetInfo.setInfo[idx].setName +"</li>")
+    $(".setUnorderedList").append("<li onclick=\"clickStudentVoca()\" class = \"setNameList\"><div id=\"vocaType\"><img src=\"../../../static/Images/classCardVoca.png\" alt=\"단어\"></div>" + sampleSetInfo.setInfo[idx].setName +"</li>")
 }
