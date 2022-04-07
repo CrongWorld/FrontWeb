@@ -144,8 +144,6 @@ function create ()
         repeat: 4,
         setXY: { x: 50, y: 0, stepX: 250}
     });
-    
-
 
     stars.children.iterate(function (child) {
 
@@ -153,7 +151,16 @@ function create ()
         child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
     });
 
+    purpleStar = this.physics.add.group({
+        key: 'purpleStar',
+        repeat: 2,
+        setXY: { x: 200, y: 0, stepX: 321}
+    });
 
+    purpleStar.children.iterate(function(child){
+        child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
+    })
+    
     bombs = this.physics.add.group();
 
     //  The score
@@ -163,9 +170,11 @@ function create ()
     this.physics.add.collider(player, platforms);
     this.physics.add.collider(stars, platforms);
     this.physics.add.collider(bombs, platforms);
+    this.physics.add.collider(purpleStar, platforms);
 
     //  Checks to see if the player overlaps with any of the stars, if he does call the collectStar function
-    this.physics.add.overlap(player, stars, collectStar, null, this);
+    this.physics.add.overlap(player, stars, collectStar);
+    this.physics.add.overlap(player, purpleStar, badCollectStar);
 
     this.physics.add.collider(player, bombs, hitBomb, null, this);
 }
@@ -202,7 +211,7 @@ function update ()
     }
 }
 
-function collectStar (player, star)
+function collectStar (player, star, purpleStar)
 {
     star.disableBody(true, true);
 
@@ -226,8 +235,14 @@ function collectStar (player, star)
         bomb.setCollideWorldBounds(true);
         bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
         bomb.allowGravity = false;
-
     }
+}
+
+function badCollectStar(player, purpleStar)
+{
+    purpleStar.disableBody(true, true);
+    score -= 15;
+    scoreText.setText('Score: ' + score);
 }
 
 function hitBomb (player, bomb)
