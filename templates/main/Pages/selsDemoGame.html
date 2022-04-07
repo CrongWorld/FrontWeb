@@ -211,7 +211,7 @@ function update ()
     }
 }
 
-function collectStar (player, star, purpleStar)
+function collectStar (player, star)
 {
     star.disableBody(true, true);
 
@@ -219,10 +219,17 @@ function collectStar (player, star, purpleStar)
     score += 10;
     scoreText.setText('Score: ' + score);
 
-    if (stars.countActive(true) === 0)
+    console.log("활성 별: " + stars.countActive(true));
+    if (stars.countActive(true) == 0)
     {
         //  A new batch of stars to collect
         stars.children.iterate(function (child) {
+
+            child.enableBody(true, child.x, 0, true, true);
+
+        });
+
+        purpleStar.children.iterate(function (child) {
 
             child.enableBody(true, child.x, 0, true, true);
 
