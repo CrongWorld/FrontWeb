@@ -26,6 +26,8 @@ const sampleVoca =
     ]
 }
 
+
+
 var config = {
     type: Phaser.AUTO,
     width: 1200,
@@ -36,6 +38,10 @@ var config = {
             gravity: { y: 300},
             debug: false
         }
+    },
+    parent: 'phaser-example',
+    dom: {
+        createContainer: true
     },
     scene: {
         preload: preload,
@@ -57,6 +63,8 @@ let position ={x: [], y: []}; // 별의 좌표
 var playerNickName;
 var old_x, old_y;
 
+var element;
+
 var starAppearanceCnt=0;
 
 //움직임 학인
@@ -64,17 +72,12 @@ var isPlayerMove = false;
 var isYellowStar_1_Move = false;
 var isYellowStar_2_Move = false;
 var isYellowStar_3_Move = false;
+var isPurpleStar_1_Move = false;
+var isPurpleStar_2_Move = false;
+var isPurpleStar_3_Move = false;
 
 //스테이지 정보 확인
 var isNewStage=false;
-
-
-
-var old_purpleStar ={
-    "x": "value",
-    "y": "value",
-    "score": "value"
-}
 
 var old_yellowStarArr = [];
 var old_purpleStarArr = [];
@@ -87,8 +90,6 @@ var yellowStarLabel_3;
 var purpleStarLabel_1;
 var purpleStarLabel_2;
 var purpleStarLabel_3;
-
-
 
 var game = new Phaser.Game(config);
 
@@ -104,6 +105,7 @@ function preload ()
     this.load.image('bomb', 'js/starCollecter/static/assets/bomb.png');
     this.load.image('purpleStar', 'js/starCollecter/static/assets/purpleStar.png');
     this.load.spritesheet('dude', 'js/starCollecter/static/assets/dude.png', { frameWidth: 32, frameHeight: 48 });
+    this.load.html('nameform', 'js/starCollecter/static/assets/text/loginform.html');
 }
 
 function create ()
@@ -202,6 +204,9 @@ function create ()
 
     //  Game mode
     gameModeText = this.add.text(1000, 16, '동사 찾기', {fontSize: '32px', fill: '#000'});
+    
+    
+    
 
     //   playser NickName
     //playerNickName = this.add.text(70, 620, 'Sels', {fontSize: '18px', fill: '#111'});
@@ -217,9 +222,46 @@ function create ()
     this.physics.add.overlap(player, purpleStar, badCollectStar);
     this.physics.add.collider(player, bombs, hitBomb, null, this);
 
-    //dummy datas
+    //******************************** dummy datas
     playerNickName = this.add.text(player.x, player.y, 'Sels', {fontSize: '18px', fill: '#111'});
 
+    //ref: phaser3 form input example
+    var element = this.add.dom(600, 400).createFromCache('nameform');
+
+    element.setPerspective(800);
+
+    element.addListener('click');
+    let physics = this.physics;
+    physics.pause();
+    element.on('click', function (event) {
+
+        if (event.target.name === 'playButton')
+        {
+            var inputUsername = this.getChildByName('textBookName');
+            var inputPassword = this.getChildByName('nickName');
+
+            //  Have they entered anything?
+            if (inputUsername.value !== '' && inputPassword.value !== '')
+            {
+                //  Turn off the click events
+                this.removeListener('click');
+
+                element.setVisible(false);
+
+                physics.resume();
+            }
+            
+        }
+
+    });
+ 
+    this.tweens.add({
+        targets: element,
+        y: 300,
+        duration: 3000,
+        ease: 'Power3'
+    });
+    
     star1.children.iterate(function(child, num){
         //  old star 좌표, score 정의
         var old_yellowStar =[{
@@ -232,14 +274,34 @@ function create ()
         old_yellowStar.y = 0;
         old_yellowStarArr[num] = old_yellowStar
     });
+
+    purpleStar.children.iterate(function(child, num){
+        //  old star 좌표, score 정의
+        var old_purpleStar =[{
+            "x": "value",
+            "y": "value",
+            "score": "value"
+        }]
+
+        old_purpleStar.x = 0;
+        old_purpleStar.y = 0;
+        old_purpleStarArr[num] = old_purpleStar;
+    });
     
-    yellowStarLabel_1 = this.add.text(0,0, sampleVoca.voca[starAppearanceCnt].englishVoca);
-    yellowStarLabel_2 = this.add.text(0,0, sampleVoca.voca[starAppearanceCnt].englishVoca);
-    yellowStarLabel_3 = this.add.text(0,0, sampleVoca.voca[starAppearanceCnt].englishVoca);
+    yellowStarLabel_1 = this.add.text(0, 0, sampleVoca.voca[starAppearanceCnt].englishVoca);
+    yellowStarLabel_2 = this.add.text(0, 0, sampleVoca.voca[starAppearanceCnt].englishVoca);
+    yellowStarLabel_3 = this.add.text(0, 0, sampleVoca.voca[starAppearanceCnt].englishVoca);
+
+    purpleStarLabel_1 = this.add.text(0, 0, sampleVoca.voca[starAppearanceCnt].englishVoca);
+    purpleStarLabel_2 = this.add.text(0, 0, sampleVoca.voca[starAppearanceCnt].englishVoca);
+    purpleStarLabel_3 = this.add.text(0, 0, sampleVoca.voca[starAppearanceCnt].englishVoca);
+    //******************************** END dummy datas
+
 }
 
 function update ()
 {
+    // 노란색 별 라벨 붙이기
     star1.children.iterate(function(child, num){
         if(num==0)
         {
@@ -278,7 +340,6 @@ function update ()
         var localVocalIndex = Math.floor(starAppearanceCnt%sampleVoca.voca.length)+1;
 
         yellowStarLabel_2 = this.add.text(old_yellowStarArr[1].x - 40, old_yellowStarArr[1].y + 20, sampleVoca.voca[localVocalIndex].englishVoca);
-
     }
 
     if(isYellowStar_3_Move)
@@ -289,9 +350,56 @@ function update ()
         yellowStarLabel_3 = this.add.text(old_yellowStarArr[2].x - 40, old_yellowStarArr[2].y + 20, sampleVoca.voca[localVocalIndex].englishVoca);
     }
 
+    // 보라색 별 라벨 붙이기
+    purpleStar.children.iterate(function(child, num){
+        if(num==0)
+        {
+            if(child.x != old_purpleStarArr[0].x || (child.y - old_purpleStarArr[0].y)**2 < 10)
+            {
+                isPurpleStar_1_Move=true;
+            }
+        }
+        if(num==1)
+        {
+            if(child.x != old_purpleStarArr[1].x || (child.y - old_purpleStarArr[1].y)**2<10)
+            {
+                isPurpleStar_2_Move=true;
+            }
+        }
+        if(num==2)
+        {
+            if(child.x != old_purpleStarArr[2].x || (child.y - old_purpleStarArr[2].y)**2<10)
+            {
+                isPurpleStar_3_Move=true;
+            }
+        }
+    });
+
+    if(isPurpleStar_1_Move)
+    {
+        purpleStarLabel_1.destroy();
+        var localVocalIndex = Math.floor(starAppearanceCnt%sampleVoca.voca.length)+3;
+
+        purpleStarLabel_1 = this.add.text(old_purpleStarArr[0].x - 40, old_purpleStarArr[0].y + 20, sampleVoca.voca[localVocalIndex].englishVoca);
+    }
     
+    if(isPurpleStar_2_Move)
+    {
+        purpleStarLabel_2.destroy();
+        var localVocalIndex = Math.floor(starAppearanceCnt%sampleVoca.voca.length)+4;
 
+        purpleStarLabel_2 = this.add.text(old_purpleStarArr[1].x - 40, old_purpleStarArr[1].y + 20, sampleVoca.voca[localVocalIndex].englishVoca);
+    }
 
+    if(isPurpleStar_3_Move)
+    {
+        purpleStarLabel_3.destroy();
+        var localVocalIndex = Math.floor(starAppearanceCnt%sampleVoca.voca.length)+5;
+
+        purpleStarLabel_3 = this.add.text(old_purpleStarArr[2].x - 40, old_purpleStarArr[2].y + 20, sampleVoca.voca[localVocalIndex].englishVoca);
+    }
+
+    //*********** Player
     if(player.x != old_x || player.y != old_y)
     {
         playerNickName.destroy();
@@ -343,16 +451,21 @@ function update ()
         old_yellowStar.x = child.x;
         old_yellowStar.y = child.y;
         old_yellowStarArr[num] = old_yellowStar;
-
-        
     })
 
     purpleStar.children.iterate(function(child, num){
+        var old_purpleStar =[{
+            "x": "value",
+            "y": "value",
+            "score": "value"
+        }];
+
         old_purpleStar.x = child.x;
         old_purpleStar.y = child.y;
         old_purpleStarArr[num] = old_purpleStar;
     });
 
+   
     old_x = player.x;
     old_y = player.y;
 }
