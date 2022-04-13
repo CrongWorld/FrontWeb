@@ -71,6 +71,10 @@ var soundfx;
 
 var game = new Phaser.Game(config);
 
+var fs = require('fs');
+var text2png = require('text2png');
+fs.writeFileSync('out.png', text2png('Hello!', {color: 'blue'}));
+
 function preload ()
 {
     this.load.image('sky', 'assets/sky.png');
