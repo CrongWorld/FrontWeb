@@ -3,12 +3,13 @@ const sampleVoca =
     "setCode": 1234,
     "textBookName": "Sample Set",
     "voca": [
-    { "vocaindex": 1, "englishVoca": "cellphone", "koreanMean": "핸드폰", "score": -15 },
+    { "vocaindex": 6, "englishVoca": "walk", "koreanMean": "걷다", "score": 10 },
     { "vocaindex": 2, "englishVoca": "fight", "koreanMean": "싸우다", "score": 10 },
+    { "vocaindex": 16, "englishVoca": "speak", "koreanMean": "말하다", "score": 10 },
+    { "vocaindex": 1, "englishVoca": "cellphone", "koreanMean": "핸드폰", "score": -15 },
     { "vocaindex": 3, "englishVoca": "camera", "koreanMean": "카메라", "score": -15 },
     { "vocaindex": 4, "englishVoca": "pedestrian", "koreanMean": "보행자", "score": -15 },
     { "vocaindex": 5, "englishVoca": "banana", "koreanMean": "바나나", "score": -15 },
-    { "vocaindex": 6, "englishVoca": "walk", "koreanMean": "걷다", "score": 10 },
     { "vocaindex": 7, "englishVoca": "bowl", "koreanMean": "공기/밥그릇", "score": -15 },
     { "vocaindex": 8, "englishVoca": "butter", "koreanMean": "버터", "score": -15 },
     { "vocaindex": 9, "englishVoca": "cake", "koreanMean": "케잌", "score": -15 },
@@ -18,16 +19,13 @@ const sampleVoca =
     { "vocaindex": 13, "englishVoca": "already", "koreanMean": "벌써", "score": -15 },
     { "vocaindex": 14, "englishVoca": "see", "koreanMean": "보다", "score": -15 },
     { "vocaindex": 15, "englishVoca": "also", "koreanMean": "또한", "score": -15 },
-    { "vocaindex": 16, "englishVoca": "speak", "koreanMean": "말하다", "score": 10 },
+    
     { "vocaindex": 17, "englishVoca": "and", "koreanMean": "그리고", "score": -15 },
     { "vocaindex": 18, "englishVoca": "angry", "koreanMean": "화가 나다", "score": 10 },
     { "vocaindex": 19, "englishVoca": "animal", "koreanMean": "동물", "score": -15 },
     { "vocaindex": 20, "englishVoca": "another", "koreanMean": "또 하나/다른", "score": -15 }
     ]
 }
-
-
-
 var config = {
     type: Phaser.AUTO,
     width: 1200,
@@ -90,6 +88,8 @@ var yellowStarLabel_3;
 var purpleStarLabel_1;
 var purpleStarLabel_2;
 var purpleStarLabel_3;
+
+//game stage관련 변수들
 
 var game = new Phaser.Game(config);
 
