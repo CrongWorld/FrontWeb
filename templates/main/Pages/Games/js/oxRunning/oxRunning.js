@@ -18,8 +18,7 @@ const sampleVoca =
     { "vocaindex": 11, "englishVoca": "actually", "koreanMean": "사실은", "score": -15 },
     { "vocaindex": 13, "englishVoca": "already", "koreanMean": "벌써", "score": -15 },
     { "vocaindex": 14, "englishVoca": "see", "koreanMean": "보다", "score": -15 },
-    { "vocaindex": 15, "englishVoca": "also", "koreanMean": "또한", "score": -15 },
-    
+    { "vocaindex": 15, "englishVoca": "also", "koreanMean": "또한", "score": -15 }, 
     { "vocaindex": 17, "englishVoca": "and", "koreanMean": "그리고", "score": -15 },
     { "vocaindex": 18, "englishVoca": "angry", "koreanMean": "화가 나다", "score": 10 },
     { "vocaindex": 19, "englishVoca": "animal", "koreanMean": "동물", "score": -15 },
@@ -31,6 +30,7 @@ var camera;
 var cursors;
 var gameModeText;
 var blockingMonster1, blockingMonster2, blockingMonster3, blockingMonster4;
+var speedStar;
 var monsterIdx = [];
 var isJump = 0;
 var gameOver = false;
@@ -85,7 +85,7 @@ var audioJSON = {
         }
     }
 };
-
+var isStarHit = false;
 
 
 //맵 생성 관련
@@ -103,6 +103,7 @@ var currentTimeText;
 //현재 상황 관련
 var currentStatusText;
 var stage = 1;
+var millis=0;
 
 //게임 설정
 var config = {
@@ -113,7 +114,7 @@ var config = {
         default: 'arcade',
         arcade: {
             gravity: { y: 150},
-            debug: true
+            debug: false
         }
     },
     dom: {
@@ -137,6 +138,7 @@ function preload()
     this.load.image('orangeSky', 'js/oxRunning/static/assets/sunorbit.png');
     this.load.image('ground', 'js/oxRunning/static/assets/platform.png');
     this.load.image('platForm', 'js/oxRunning/static/assets/halfPlatform.png');
+    this.load.image('star', 'js/oxRunning/static/assets/star.png');
     
     this.load.spritesheet('dude', 'js/oxRunning/static/assets/dude.png', { frameWidth: 32, frameHeight: 48 });
     this.load.spritesheet('BlockMonster', 'js/oxRunning/static/assets/monster/dudeMonster.png', { frameWidth: 32, frameHeight: 48 })
@@ -149,13 +151,30 @@ function create()
 {
     //배경음악
     this.music =  this.sound.add('boden', {
-		volume: 0.6,
+		volume: 0.4,
 		loop: true
 	})
+	this.music.play()
+    // A simple background for our game
+    var bgImage = this.add.image(600, 400, 'blueSky');
+    bgImage.setScale(3)
+    bgImage.displayWidth = 100000;
     //점프 효과음
     this.sfx = this.sound.addAudioSprite('sfx');
 
-	this.music.play()
+    //별 추가
+    //  add physics to stars 
+    speedStar = this.physics.add.group({
+        key: 'star',
+        repeat: 4,
+        setXY: { x: 500, y: 0, stepX: 2500}
+    });
+    
+    speedStar.children.iterate(function (child) {
+        //  Give each star a slightly different bounce
+        child.setBounceY(Phaser.Math.FloatBetween(0.6, 1));
+        
+    });
 
     //this.matter.world.setBounds(0, 0, 3200, 600);
     this.cameras.main.setBounds(0, 0, 3200, 600);
@@ -169,10 +188,7 @@ function create()
     makePlatForm(defaultPlatformX, 3000);
     //console.log(monsterIdx)
     
-    // A simple background for our game
-    var bgImage = this.add.image(600, 400, 'blueSky');
-    bgImage.setScale(3)
-    bgImage.displayWidth = 100000;
+    
 
     // 땅과 플랫폼을 생성한다. 
     var ground = this.physics.add.staticGroup();
@@ -274,6 +290,8 @@ function create()
     //  충돌 물리법칙 추가
     this.physics.add.collider(player, ground);
     this.physics.add.collider(player, platform);
+    this.physics.add.collider(speedStar, platform);
+    this.physics.add.collider(speedStar, ground);
     this.physics.add.collider(blockingMonster1, ground);
     this.physics.add.collider(blockingMonster1, platform);
     this.physics.add.collider(blockingMonster2, ground);
@@ -288,6 +306,7 @@ function create()
     this.physics.add.overlap(player, blockingMonster2, hitMonster);
     this.physics.add.overlap(player, blockingMonster3, hitMonster);
     this.physics.add.overlap(player, blockingMonster4, hitMonster);
+    this.physics.add.overlap(player, speedStar, collectStar)
    
     //camera 
     camera = this.cameras.main;
@@ -313,11 +332,8 @@ function update()
     }
 
     //게임 스코어 관련
-    const millis = currentTime - gameStartTime;
-    if(millis > 100)
-    {
-        currentTimeText.setText('Record: '+millis);
-    }
+    millis = (currentTime - gameStartTime)/1000;
+    currentTimeText.setText('Record: '+millis);
     //monster.anims.play('blocking');
     if (cursors.left.isDown)
     {
@@ -396,10 +412,18 @@ function update()
             word12.setVisible(false);
             characterVelocity = 0;
             
+
             this.add.text(400, 380, 'Your Score: '+millis, {fontSize: '40px', fill: '#000'});
         }
-        
+    }
 
+    if(isStarHit)
+    {
+        this.sfx.play('ping');
+        //현상태 텍스트
+        currentStatusText = this.add.text(player.x + 500, 16, 'SPEED UP!', {fontSize: '25px', fill: '#000'});
+        
+        isStarHit = false;
     }
     //monster
     camera.setPosition((player.x * -1)+80, 0);
@@ -424,7 +448,19 @@ function makePlatForm(defaultX, gap)
 
 function hitMonster(player, blockingMonster)
 {
+    console.log("hit!");
     slowerStartTime = Date.now();
     characterVelocity = 400;
 }
 
+function collectStar (player, star)
+{
+    star.disableBody(true, true);
+
+    isStarHit = 1; 
+
+    //  Add and update the score
+    millis -= 3000
+
+    characterVelocity += 500;
+}
